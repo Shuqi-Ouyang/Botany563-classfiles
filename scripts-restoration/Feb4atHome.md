@@ -166,3 +166,61 @@ $ ^C
 
 欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
 $
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles (main)
+$ git mkdir scripts-restoration
+git: 'mkdir' is not a git command. See 'git --help'.
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles (main)
+$ mkdir scripts-restoration
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles (main)
+$ cd scripts-restoration
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ notepad Jan28inClass
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ rm notepad Jan28inClass
+rm: cannot remove 'notepad': No such file or directory
+rm: cannot remove 'Jan28inClass': No such file or directory
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ rm notepad Jan28inClass.txt
+rm: cannot remove 'notepad': No such file or directory
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ touch Jan28inClass.md
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ mv Jan28inClass.md Jan30inClass.md
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ touch Feb4atHome.md
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ git add .
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ git commit -m"backup0204"
+[main 8189937] backup0204
+ 2 files changed, 227 insertions(+)
+ create mode 100644 scripts-restoration/Feb4atHome.md
+ create mode 100644 scripts-restoration/Jan30inClass.md
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.19 KiB | 1.09 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Shuqi-Ouyang/Botany563-classfiles.git
+   e24edb1..8189937  main -> main
+
+欧阳葭@LAPTOP-5PMP3V9O MINGW64 ~/desktop/Botany563-classfiles/scripts-restoration (main)
+$

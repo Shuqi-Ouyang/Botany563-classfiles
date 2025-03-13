@@ -154,9 +154,9 @@ Original scripts:
 > sequences <- read.dna("D_Dataver1.fasta", format = "fasta")
 > print(sequences)
 > dna <- read.dna("C:/Users/欧阳葭/Desktop/fixed_aligned_sequences.fasta", format = "fasta")
-> # 计算距离矩阵（使用 Kimura 2-parameter 模型）
+计算距离矩阵（使用 Kimura 2-parameter 模型）
 > dist_matrix <- dist.dna(dna, model = "K80")
-> # 查看距离矩阵是否正常
+查看距离矩阵是否正常
 > print(dist_matrix)
              MZ160998.1   MZ160997.1   MZ160996.1
 MZ160997.1 0.1836115165                          
@@ -225,10 +225,10 @@ MZ160994.1   04    04
 8 bytes
 > library(ape)
 > 
-> # 计算基因距离矩阵（使用 TN93 模型）
+计算基因距离矩阵（使用 TN93 模型）
 > D <- dist.dna(dna, model = "TN93")
 > 
-> # 查看矩阵的结构
+查看矩阵的结构
 > class(D)  # 应该返回 "dist"
 [1] "dist"
 > length(D) # 查看 pairwise 距离数量
@@ -299,10 +299,10 @@ Unrooted; no branch length.
 > plot(tre.pars, type="unr", show.tip.label=FALSE, edge.width=2)
 > title("Maximum Parsimony Tree")
 > 
-> # 获取树叶名称（物种编号）
+获取树叶名称（物种编号）
 > my_tips <- tre.pars$tip.label
 > 
-> # 为每个tip添加文字和背景色
+为每个tip添加文字和背景色
 > tiplabels(
 +     text = my_tips,       # 标签内容（向量，与树的tip顺序一致）
 +     bg   = "lightblue",   # 背景颜色（可以是单一颜色或向量）
@@ -323,7 +323,7 @@ Unrooted; no branch length.
 +     fg   = "black"
 + )
 > 
-> # 如果想加图例：
+如果想加图例：
 > legend("bottomleft", legend = my_tips, fill = my_colors, cex = 0.6, bg="white")
 > 
 > plot(tre.pars, type="fan", show.tip.label=FALSE, edge.width=2)
@@ -353,7 +353,7 @@ Unrooted; no branch length.
 +     fg   = "black"
 + )
 > 
-> # 如果想加图例：
+如果想加图例：
 > legend("bottomleft", legend = my_tips, fill = my_colors, cex = 0.6, bg="white")
 
 ### Running RAxML

@@ -129,11 +129,6 @@ To disable this change, add the --leavegappyregion option.
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~$ pip install biopython
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~$ from Bio import SeqIO
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~$ cd phylo-class
-(fasta_clean) suki@LAPTOP-5PMP3V9O:~/phylo-class$ python -c "from Bio import SeqIO; infile, outfile = 'C:/Users/欧阳葭/Desktop/aligned_sequences.fasta', 'C:/Users/欧阳葭/Desktop/fixed_aligned_sequences.fasta'; with open(infile, 'r') as in_f, open(outfile, 'w') as out_f: [SeqIO.write(r._replace(id=r.id.split()[0], description=''), out_f, 'fasta') for r in SeqIO.parse(in_f, 'fasta')]; print('✅ 处理完成！')"
-  File "<string>", line 1
-    from Bio import SeqIO; infile, outfile = 'C:/Users/欧阳葭/Desktop/aligned_sequences.fasta', 'C:/Users/欧阳葭/Desktop/fixed_aligned_sequences.fasta'; with open(infile, 'r') as in_f, open(outfile, 'w') as out_f: [SeqIO.write(r._replace(id=r.id.split()[0], description=''), out_f, 'fasta') for r in SeqIO.parse(in_f, 'fasta')]; print('✅ 处理完成！')
-                                                                                                                                                               ^
-SyntaxError: invalid syntax
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~/phylo-class$ ^C
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~/phylo-class$ nano clean_fasta.py
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~/phylo-class$ conda activate fasta_clean

@@ -1,35 +1,53 @@
-## **Notebook reproducible script for Botany 563-Shuqi**
+# **Notebook reproducible script for Botany 563-Shuqi**
 
-<aside>
-💡
-
-> Note: All the original scripts, including errors, are restored by date in the “scripts restoration” folder.
-> 
-</aside>
+Note: All the original scripts, including errors, are restored by date in the “scripts restoration” folder.
 
 
-### Choosing data and performing QC
+## Choosing data and performing QC
 
-02/11/2025 Attempt1 
+02/11/2025
 
 Phylogenetics Course Dataset Description
 11 complete chloroplast genomes of Dipterocarpoideae in China (https://pmc.ncbi.nlm.nih.gov/articles/PMC8620154/) and
 1 complete chloroplast genome of Vatica guangxiensis (https://pmc.ncbi.nlm.nih.gov/articles/PMC7671599/)
 
 
-### Installing Windows Subsystem for Linux (WSL)
+## Installing Windows Subsystem for Linux (WSL)
 
 02/11/2025
 
 Fail to run conda and miniconda on my windows system, thus I decide to install WSL.
 
+### Installing Miniconda on Windows System (Failed)
+
 1. For Win11 system users like me with a "Destination Folder' cannot contain non-ascii characters" error when installing miniconda, one solution is to install it in another location like "D:\miniconda3", then add the exact location to SystemProperties-Advanced-Environmental Variables-Path.
+
+### WSL Installation and Setup
+
 2. But after that, I found there is no adequate Wins version of Clustalw/T-coffee/Muscle on any channels of Conda. If still want to use Conda to run them, one possible way is to install WSL(Windows Subsystem for Linux setting). If not, just install Muscle online, which should run stably on Win system. The scirpts to install WSL: wsl --install.
-3. Restart to check whether WSL is running. If not, make sure if these Windows Features "Windows Subsystem for Linux, Virtual Machine Platform, Windows Hypervisor Platform, and Hyper-V" are on. Then restart.
-4. And then miniconda can be installed smoothly, as well as Clustalw and Muscle. However, T-coffee is still not installable.
+
+Initially, I encountered issues launching WSL, specifically the error code 0x80370114, which indicated that the necessary Windows features for WSL (such as the Virtual Machine Platform and Windows Subsystem for Linux) were not enabled. I resolved this by executing the following commands in an elevated PowerShell terminal:
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+Restart to check whether WSL is running. If not, make sure if these Windows Features "Windows Subsystem for Linux, Virtual Machine Platform, Windows Hypervisor Platform, and Hyper-V" are on. Then restart.
+
+After restarting the system and confirming feature activation, I successfully installed Ubuntu via:
+wsl --install -d Ubuntu
+
+### MiniConda and ClustalW Installation
+
+3. Within the Ubuntu terminal, I installed Miniconda (Linux version) to manage bioinformatics tools. After downloading and installing Miniconda, I configured Conda by adding necessary channels:
+
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda install -c bioconda clustalw
+
+This provided access to ClustalW (Linux version) within the WSL environment.
 
 
-### Installing Miniconda, Clustalw, Muscle, and Maftt for MSA
+## Installing Miniconda, Clustalw, Muscle, and Maftt for MSA
 
 02/11/2025 Attempt1
 Installing Clustalw and Muscle in Miniconda.
@@ -38,93 +56,64 @@ Installing Clustalw and Muscle in Miniconda.
 Adding Maftt in Miniconda.
 
 
-### Aligning data
+## Multiple Sequence Alignment of Chloroplast Genomes in WSL 
+
+After completing the setup of WSL (Windows Subsystem for Linux), Miniconda, and ClustalW (described in Step 1), the second major step of the project focused on aligning chloroplast genome sequences from species of the genus Vatica using both MUSCLE and MAFFT within the WSL environment.
 
 02/18/2025 Attempt1
 Aligning two taxa, Vatica guangxiensis and Vatica Xishuangbanansis
 
+### File Preparation and Access 
+1. Fasta-format files (.fna) for 2 Vatica species were initially downloaded or extracted from available genome data sources and transferred manually to WSL via the mounted path:
+
+/mnt/c/Users/用户名/... → /home/suki/phylo-class/hw-aligning-your-own-data/
+
+A warning about potential harmful files from Windows Security appeared during this transfer, but it was dismissed after confirming the source was trusted.
+
+### MUSCLE Alignment Attempt
+2. Initially, MUSCLE 5.1 was tested using the following command: 
+
+muscle -align all_chloroplasts.fasta -output aligned_sequences.aln
+
+However, issues arose due to:
+
+   Very long sequence lengths (~150,000 bp).
+   Incompatibility with -maxiters (invalid option in MUSCLE 5).
+   Fatal error: allocflat.cpp(15) assert failed due to memory allocation limits in MUSCLE.
+
+### Transition to MAFTT
+3. Due to MUSCLE’s failure to handle long chloroplast sequences, the workflow switched to MAFFT, which handled memory allocation better for large DNA sequences.
+
+Progressive alignment was performed using:
+
+mafft --auto all_chloroplasts.fasta > aligned_sequences_mafft.fasta
+
+Alignment completed successfully using MAFFT’s FFT-NS-2 algorithm in memory-saving mode.
+
+### Visualization and Verification 
+4. The alignment file was opened using AliView, but installation via sudo apt install aliview failed on WSL due to missing repositories.
+
+Instead, the aligned fasta file was transferred back to the Windows host system and visualized using AliView installed on Windows.
+
+In AliView, an issue was discovered: only one sequence (Vatica xishuangbannaensis) had visible bases while Vatica guangxiensis showed only gaps (------). This prompted a data quality check.
+
+### Debugging Alignment Issues 
+5. Investigation revealed that the initial .fna files might have been corrupted or inconsistently formatted.
+
+The sequences were manually re-downloaded, headers checked for consistency, and merged into a new fasta file.
+
+A new alignment was run, which correctly displayed both sequences.
+
 03/04/2025 Attempt2
-1. Aligning total 12 taxa through Maftt
-Original Scripts:
-(base) suki@LAPTOP-5PMP3V9O:~/phylo-class$ mafft --auto D_Dataver1.fasta > aligned_sequences.fasta
-nthread = 0
-nthreadpair = 0
-nthreadtb = 0
-ppenalty_ex = 0
-stacksize: 8192 kb
-generating a scoring matrix for nucleotide (dist=200) ... done
-Gap Penalty = -1.53, +0.00, +0.00
+### Fasta Consolidation
+1. Collected 12 Dipterocarpaceae chloroplast genome sequences and concatenated them into a single file, D_Dataver1.fasta.
+Merged individual FASTA files using either a shell command (cat *.fasta > D_Dataver1.fasta) or a small Python script in a Miniconda environment with Biopython.
 
+### Initial FASTA Validation & Cleaning
+2. Attempted to read D_Dataver1.fasta in R with ape::read.dna() but encountered errors because some headers contained long descriptions.
 
+Wrote and ran a Biopython script (clean_fasta.py) in the same Miniconda environment to strip each header down to its accession ID (e.g. >MZ160998.1), producing fixed_aligned_sequences.fasta.
 
-Making a distance matrix ..
-
-There are 17 ambiguous characters.
-    1 / 12
-done.
-
-Constructing a UPGMA tree (efffree=0) ...
-   10 / 12
-done.
-
-Progressive alignment 1/2...
-STEP     1 / 11
-len1=151493, len2=151010, Switching to the memsave mode
-STEP     4 / 11 mDP 00759 / 00759
-Reallocating..done. *alloclen = 327955
-STEP     6 / 11 mDP 00714 / 00714
-Reallocating..done. *alloclen = 329836
-STEP     7 / 11 mDP 00594 / 00594
-Reallocating..done. *alloclen = 335642
-STEP     8 / 11 mDP 00591 / 00591
-Reallocating..done. *alloclen = 362014
-STEP     9 / 11 mDP 00519 / 00519
-Reallocating..done. *alloclen = 367507
-STEP    11 / 11 mDP 00142 / 00142
-done.
-
-Making a distance matrix from msa..
-    0 / 12
-done.
-
-Constructing a UPGMA tree (efffree=1) ...
-   10 / 12
-done.
-
-Progressive alignment 2/2...
-STEP     1 / 11
-len1=151493, len2=151010, Switching to the memsave mode
-STEP     4 / 11 mDP 00891 / 00891
-Reallocating..done. *alloclen = 311738
-STEP     6 / 11 mDP 00697 / 00697
-Reallocating..done. *alloclen = 313471
-STEP     7 / 11 mDP 00630 / 00630
-Reallocating..done. *alloclen = 316092
-STEP     9 / 11 mDP 00657 / 00657
-Reallocating..done. *alloclen = 327996
-STEP    10 / 11 mDP 00496 / 00496
-Reallocating..done. *alloclen = 348653
-STEP    11 / 11 mDP 00141 / 00141
-done.
-
-disttbfast (nuc) Version 7.505
-alg=M, model=DNA200 (2), 1.53 (4.59), -0.00 (-0.00), noshift, amax=0.0
-0 thread(s)
-
-
-Strategy:
- FFT-NS-2 (Fast but rough)
- Progressive method (guide trees were built 2 times.)
-
-If unsure which option to use, try 'mafft --auto input > output'.
-For more information, see 'mafft --help', 'mafft --man' and the mafft page.
-
-The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
-It tends to insert more gaps into gap-rich regions than previous versions.
-To disable this change, add the --leavegappyregion option.
-
-
-2. Cutting the unnecessary part in taxa name-line through python.
 (base) suki@LAPTOP-5PMP3V9O:~$ conda create -n fasta_clean python=3.9 -y
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~$ pip install biopython
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~$ from Bio import SeqIO
@@ -138,21 +127,36 @@ python clean_fasta.py
 (fasta_clean) suki@LAPTOP-5PMP3V9O:~/phylo-class$
 
 
+### Multiple sequence alignment (MSA)
+3. Switched to the WSL Ubuntu shell and ran MAFFT:
 
-### Distance and parsimony methods on data
-03/06/2025 Attempt1
+cd ~/phylo-class
+mafft --auto fixed_aligned_sequences.fasta > aligned_sequences.fasta
+
+Monitored the 11-step memsave-mode progress until completion.
+
+
+## Distance-based and Parsimony-based Tree Inference 
+03/06/2025 
 Using Rstudio.
-Original scripts:
-> setwd("C:/Users/欧阳葭/Desktop")
-> 
-> library(ape)
-> sequences <- read.dna("D_Dataver1.fasta", format = "fasta")
-> print(sequences)
-> dna <- read.dna("C:/Users/欧阳葭/Desktop/fixed_aligned_sequences.fasta", format = "fasta")
+
+### Distance-Based Tree(Neighbor-Joining)
+1. Post-alignment checks
+Loaded the aligned file into R:
+
+library(ape)
+sequences <- read.dna("D_Dataver1.fasta", format = "fasta")
+print(sequences)
+dna <- read.dna("C:/Users/欧阳葭/Desktop/fixed_aligned_sequences.fasta", format = "fasta")
+
+
+2. Compute pairwise distances 
+
+D <- dist.dna(dna, model="K80")
 计算距离矩阵（使用 Kimura 2-parameter 模型）
-> dist_matrix <- dist.dna(dna, model = "K80")
+dist_matrix <- dist.dna(dna, model = "K80")
 查看距离矩阵是否正常
-> print(dist_matrix)
+print(dist_matrix)
              MZ160998.1   MZ160997.1   MZ160996.1
 MZ160997.1 0.1836115165                          
 MZ160996.1 0.1815581687 0.0125499878             
@@ -214,6 +218,9 @@ MZ160997.1   04    04
 MZ160996.1   18    18
 MZ160995.1   04    04
 MZ160994.1   04    04
+
+Model: Kimura 2-parameter (K80), which accounts for different rates of transitions versus transversions.
+
 > typeof(unclass(dna)[1:5,1:10])
 [1] "raw"
 > object.size(as.character(dna))/object.size(dna)
@@ -230,7 +237,7 @@ MZ160994.1   04    04
 [1] 66
 > temp <- as.data.frame(as.matrix(D))
 
-NJ tree
+3. Build NJ tree
 > table.paint(temp, cleg=0, clabel.row=.5, clabel.col=.5)
 > temp<-t(as.matrix(D))
 > temp<-temp[,ncol(temp):1]
@@ -258,13 +265,16 @@ Unrooted; includes branch length(s).
 > title ("Dipterocarpaceae NJ tree ver1.0")
 
 
-Parsimony Tree
+### Parsimony-Based Tree(Maximum Parsimony)
+1. Convert to PhyDat format
 > dna2 <- as.phyDat(dna)
 > class(dna2)
 [1] "phyDat"
 > dna2
 12 sequences with 267535 character and 5658 different site patterns.
-The states are a c g t 
+The states are a c g t
+
+2. Initial Tree 
 > tre.ini <- nj(dist.dna(dna,model="raw"))
 > tre.ini
 
@@ -276,6 +286,8 @@ Tip labels:
 Unrooted; includes branch length(s).
 > parsimony(tre.ini, dna2)
 [1] 28914
+
+3. Optimize parsimony score
 > tre.pars <- optim.parsimony(tre.ini, dna2)
 Final p-score 28914 after  0 nni operations 
 > tre.pars
@@ -293,7 +305,8 @@ Unrooted; no branch length.
 > 
 > plot(tre.pars, type="unr", show.tip.label=FALSE, edge.width=2)
 > title("Maximum Parsimony Tree")
-> 
+ 
+4. Adjusting Tree Image 
 获取树叶名称（物种编号）
 > my_tips <- tre.pars$tip.label
 > 
@@ -351,11 +364,18 @@ Unrooted; no branch length.
 如果想加图例：
 > legend("bottomleft", legend = my_tips, fill = my_colors, cex = 0.6, bg="white")
 
-### Running RAxML
 
-03/13/2025 Attempt1
-Using RAxML-NG to run my data for three times, each time with different setting, using the last time's output.
-Original Scripts:
+## RAxML Tree Inference
+03/13/2025
+One sentence summary: using RAxML-NG to run my data for three times, each time with different setting, using the last time's output.
+
+After multiple sequence alignment was completed for all 12 taxa in the family Dipterocarpaceae, a phylogenetic analysis was conducted using RAxML-NG under the maximum likelihood (ML) framework.
+
+To begin, the aligned sequences were exported in FASTA format and transferred into the WSL (Ubuntu) environment, specifically to the working directory ~/phylo-class/. Early attempts to run RAxML-NG using files stored in the Windows-mounted directory (/mnt/c/...) caused output files to be saved outside the working directory. This issue was resolved by transferring the FASTA file directly into the Linux-native path (/home/suki/...), ensuring cleaner file management and faster I/O performance.
+
+RAxML-NG was installed within a dedicated Conda environment. Initial tests were run on the complete aligned dataset using the GTR+G model:
+
+### Attempt 1
 (iqtree-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ conda activate raxml-n
 g-env
 (raxml-ng-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ raxml-ng --msa /home/suki/phylo-class/fixed_aligned_sequences.fasta \
@@ -365,8 +385,9 @@ g-env
 (raxml-ng-env) suki@LAPTOP-5PMP3V9O:~/phylo-class$ cat /home/suki/phylo-class
 /test_run.raxml.bestTree
 (MZ379792.1:0.001131,MZ160991.1:0.001327,(MZ160992.1:0.045484,(((MZ160993.1:0.001916,MZ160994.1:0.003971):0.003316,(MZ160995.1:0.034423,(MZ160997.1:0.013106,MZ160996.1:0.005338):0.030318):0.035859):0.007575,(MZ397801.1:0.002712,((MT934442.1:0.000319,MZ397800.1:0.002830):0.000079,MZ160998.1:0.000639):0.001929):0.013448):0.009202):0.003035):0.0;
+并没有产生phy文件，也许是数据量比较小
 
-#并没有产生phy文件，也许是数据量比较小
+### Attempt 2
 (raxml-ng-env) suki@LAPTOP-5PMP3V9O:~/phylo-class$ raxml-ng --parse --msa /home/suki/phylo-class/fixed_aligned_sequences.fasta --model GTR+G --prefix parsed_data
 
 (raxml-ng-env) suki@LAPTOP-5PMP3V9O:~/phylo-class$ raxml-ng --msa /home/suki/phylo-class/fixed_aligned_sequences.fasta \
@@ -375,6 +396,7 @@ g-env
          --threads 2 \
          --seed 42
 
+### Attempt 3 (Final Choice)
 加入了bootstrap, seed设定为42, threads 设定为2
 (raxml-ng-env) suki@LAPTOP-5PMP3V9O:~/phylo-class$ raxml-ng --msa /home/suki/phylo-class/fixed_aligned_sequences.fasta \
          --model GTR+G \
@@ -471,14 +493,17 @@ Analysis started: 13-Mar-2025 14:06:54 / finished: 13-Mar-2025 14:07:19
 
 Elapsed time: 25.457 seconds
 
-4.22 
-4/22
 
-1. Locate to where the data is stored 
+## Bayesian Tree Inference 
+
+### Locate to where the data is stored
+1. To perform Bayesian phylogenetic inference, we used MrBayes v3.2.7a on a WSL-based Ubuntu environment. Prior to analysis, the complete chloroplast genome sequences (12 taxa) were aligned and saved in FASTA format. 
 
 (base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ cd ~/phylo-class/Bayesian-exercise
 
-1. Convert the data file type, from .fasta to .nex
+###  Convert the data file type, from .fasta to .nex
+2. 
+The FASTA file was converted to NEXUS format using the ape package in R to ensure compatibility with MrBayes, as earlier attempts using AMAS and seqmagick resulted in improperly formatted or overly long sequence lines that caused MrBayes to crash.
 
 2.1 First try through AMAS (however failed)
 
@@ -531,11 +556,7 @@ Returning execution to command line ...
 
 Error in command "Execute"
 
-<aside>
-💡
-
 文件出现问题的原因：
-
 说明 MrBayes 在读到某一行时，把行首的 “–” （dash）当成了“类名”（taxon name），因为它找不到名为 “-” 的 taxon，就报错了。根本原因在于 **你的 interleaved‑NEXUS 文件格式不完全符合 MrBayes 的要求**：
 
 1. **每个序列区块**第一行都必须以 taxon 名称开头；
@@ -544,6 +565,7 @@ Error in command "Execute"
 </aside>
 
 2.2 Second try to modified my data through R, success!
+We encountered a key issue where MrBayes reported Token too long and Could not find taxon - in list of taxa errors when reading interleaved NEXUS files generated by AMAS, due to improperly wrapped sequences. This was resolved by reading the aligned FASTA file into R using read.dna() and exporting it as a properly interleaved NEXUS file with write.nexus.data(). The resulting file successfully passed MrBayes input validation.
 
 (base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ sudo apt install r-base-core
 
@@ -564,7 +586,9 @@ interleaved = TRUE
 
 q(save="no")
 
-1.  Creating block file, naming as mbblock_d01.txt
+
+### Creating block file, naming as mbblock_d01.txt
+3. A separate MrBayes block file (mbblock_d01.txt) was created to specify model parameters and execute the MCMC procedure. 
 
 begin mrbayes;
 set autoclose=yes nowarn=yes;
@@ -585,7 +609,10 @@ sumt burnin=500;
 
 end;
 
-1. Analysis my data through Bayesian 
+### Analysis my data through Bayesian 
+4. The analysis used a GTR+Gamma substitution model (nst=6, rates=gamma) with two independent runs (nruns=2) of four chains each (nchains=4) over 200,000 generations, sampling every 200 generations. Convergence was assessed via standard diagnostics, and posterior summaries were generated using the sumt command.
+
+Output files, including .p (parameter), .t (tree), and .con (consensus tree), were successfully generated and used for downstream interpretation.
 
 (base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ mb
 

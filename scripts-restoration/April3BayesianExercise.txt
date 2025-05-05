@@ -1,0 +1,755 @@
+indows [Version 10.0.26100.3476]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\欧阳葭>wsl
+(base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ cd ~/phylo-class/Bayesian-exercise
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ mb
+
+```
+                        MrBayes 3.2.7a x86_64
+
+                  (Bayesian Analysis of Phylogeny)
+
+                         (Parallel version)
+                     (1 processors available)
+
+          Distributed under the GNU General Public License
+
+           Type "help" or "help <command>" for information
+                 on the commands that are available.
+
+               Type "about" for authorship and general
+                   information about the program.
+
+```
+
+MrBayes > execute algaemb.nex
+
+Executing file "algaemb.nex"
+DOS line termination
+Longest line length = 75
+Parsing file
+Expecting NEXUS formatted file
+Reading taxa block
+Allocated taxon set
+Defining new set of 8 taxa
+Exiting taxa block
+Deleting previously defined taxa
+Reading data block
+Allocated taxon set
+Allocated matrix
+Defining new matrix with 8 taxa and 920 characters
+Data is Rna
+Missing data coded as ?
+Gaps coded as -
+Taxon 1 -> Tobacco
+Taxon 2 -> Rice
+Taxon 3 -> Marchantia
+Taxon 4 -> Chlamydomonas
+Taxon 5 -> Chlorella
+Taxon 6 -> Euglena
+Taxon 7 -> Anacystis_nidulans
+Taxon 8 -> Olithodiscus
+Successfully read matrix
+Setting default partition (does not divide up characters)
+Setting model defaults
+Seed (for generating default start values) = 1743706213
+Setting output file names to "algaemb.nex.run<i>.<p|t>"
+Exiting data block
+Reached end of file
+
+MrBayes > execute mbblock.txt
+
+Executing file "mbblock.txt"
+DOS line termination
+Longest line length = 81
+Parsing file
+Reading mrbayes block
+Setting autoclose to yes
+Setting Brlenspr to Unconstrained:Exponential(10.00)
+Successfully set prior model parameters
+Setting Shapepr to Exponential(1.00)
+Successfully set prior model parameters
+Setting Tratiopr to Beta(1.00,1.00)
+Successfully set prior model parameters
+Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00)
+Successfully set prior model parameters
+Setting Nst to 2
+Setting Rates to Gamma
+Setting Ngammacat to 4
+Successfully set likelihood model parameters
+Setting number of generations to 10000
+Setting sample frequency to 10
+Setting print frequency to 100
+WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+Setting number of runs to 1
+WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
+Setting number of chains to 3
+Setting chain output file names to "algaemb.nex.<p/t>"
+Successfully set chain parameters
+Setting outgroup to taxon "Anacystis_nidulans"
+Running Markov chain
+MCMC stamp = 8486955538
+Seed = 1762609027
+Swapseed = 1743706213
+Model settings:
+
+```
+     Data not partitioned --
+        Datatype  = RNA
+        Nucmodel  = 4by4
+        Nst       = 2
+                    Transition and transversion  rates, expressed
+                    as proportions of the rate sum, have a
+                    Beta(1.00,1.00) prior
+        Covarion  = No
+        # States  = 4
+                    State frequencies have a Dirichlet prior
+                    (1.00,1.00,1.00,1.00)
+        Rates     = Gamma
+                    The distribution is approximated using 4 categories.
+                    Shape parameter is exponentially
+                    distributed with parameter (1.00).
+
+  Active parameters:
+
+     Parameters
+     ---------------------
+     Tratio              1
+     Statefreq           2
+     Shape               3
+     Ratemultiplier      4
+     Topology            5
+     Brlens              6
+     ---------------------
+
+     1 --  Parameter  = Tratio
+           Type       = Transition and transversion rates
+           Prior      = Beta(1.00,1.00)
+
+     2 --  Parameter  = Pi
+           Type       = Stationary state frequencies
+           Prior      = Dirichlet
+
+     3 --  Parameter  = Alpha
+           Type       = Shape of scaled gamma distribution of site rates
+           Prior      = Exponential(1.00)
+
+     4 --  Parameter  = Ratemultiplier
+           Type       = Partition-specific rate multiplier
+           Prior      = Fixed(1.0)
+
+     5 --  Parameter  = Tau
+           Type       = Topology
+           Prior      = All topologies equally probable a priori
+           Subparam.  = V
+
+     6 --  Parameter  = V
+           Type       = Branch lengths
+           Prior      = Unconstrained:Exponential(10.0)
+
+  Number of chains per MPI processor = 3
+
+  The MCMC sampler will use the following moves:
+     With prob.  Chain will use move
+        1.89 %   Dirichlet(Tratio)
+        0.94 %   Dirichlet(Pi)
+        0.94 %   Slider(Pi)
+        1.89 %   Multiplier(Alpha)
+        9.43 %   ExtSPR(Tau,V)
+        9.43 %   ExtTBR(Tau,V)
+        9.43 %   NNI(Tau,V)
+        9.43 %   ParsSPR(Tau,V)
+       37.74 %   Multiplier(V)
+       13.21 %   Nodeslider(V)
+        5.66 %   TLMultiplier(V)
+
+  Division 1 has 178 unique site patterns
+  Initializing conditional likelihoods
+  Using standard SSE likelihood calculator for division 1 (single-precision)
+
+  Initial log likelihoods and log prior probs:
+     Chain 1 -- -3861.186788 -- 18.876285
+     Chain 2 -- -3635.613530 -- 18.876285
+     Chain 3 -- -3721.978157 -- 18.876285
+
+  Chain results (10000 generations requested):
+
+     0 -- [-3861.187] (-3635.614) (-3721.978) (...0 remote chains...)
+   100 -- (-3385.726) [-3362.919] (-3426.310) (...0 remote chains...) -- 0:00:00
+   200 -- (-3276.311) [-3268.919] (-3322.478) (...0 remote chains...) -- 0:00:00
+   300 -- [-3236.153] (-3248.066) (-3269.668) (...0 remote chains...) -- 0:00:00
+   400 -- (-3231.436) [-3207.454] (-3213.469) (...0 remote chains...) -- 0:00:00
+   500 -- (-3223.006) (-3195.074) [-3206.870] (...0 remote chains...) -- 0:00:00
+   600 -- (-3214.513) [-3193.535] (-3205.793) (...0 remote chains...) -- 0:00:00
+   700 -- (-3212.123) [-3188.495] (-3198.207) (...0 remote chains...) -- 0:00:00
+   800 -- [-3188.324] (-3182.737) (-3199.246) (...0 remote chains...) -- 0:00:00
+   900 -- (-3184.964) [-3183.469] (-3197.033) (...0 remote chains...) -- 0:00:00
+  1000 -- (-3188.457) [-3182.565] (-3193.299) (...0 remote chains...) -- 0:00:00
+  1100 -- [-3181.486] (-3183.847) (-3195.118) (...0 remote chains...) -- 0:00:00
+  1200 -- (-3181.945) [-3186.927] (-3187.081) (...0 remote chains...) -- 0:00:00
+  1300 -- [-3179.973] (-3182.084) (-3180.141) (...0 remote chains...) -- 0:00:06
+  1400 -- (-3181.519) [-3179.852] (-3177.679) (...0 remote chains...) -- 0:00:06
+  1500 -- (-3185.100) (-3180.515) [-3176.213] (...0 remote chains...) -- 0:00:05
+  1600 -- (-3179.020) (-3184.902) [-3186.537] (...0 remote chains...) -- 0:00:05
+  1700 -- (-3179.760) [-3180.538] (-3181.546) (...0 remote chains...) -- 0:00:04
+  1800 -- (-3186.388) [-3182.632] (-3177.973) (...0 remote chains...) -- 0:00:04
+  1900 -- (-3175.959) (-3181.501) [-3179.692] (...0 remote chains...) -- 0:00:04
+  2000 -- (-3177.722) (-3181.725) [-3181.366] (...0 remote chains...) -- 0:00:04
+  2100 -- (-3184.376) [-3178.867] (-3184.391) (...0 remote chains...) -- 0:00:03
+  2200 -- [-3180.409] (-3186.097) (-3179.465) (...0 remote chains...) -- 0:00:03
+  2300 -- [-3178.751] (-3180.117) (-3178.506) (...0 remote chains...) -- 0:00:03
+  2400 -- (-3183.499) (-3181.649) [-3177.090] (...0 remote chains...) -- 0:00:03
+  2500 -- [-3177.410] (-3185.201) (-3177.465) (...0 remote chains...) -- 0:00:03
+  2600 -- (-3183.298) (-3183.170) [-3177.186] (...0 remote chains...) -- 0:00:02
+  2700 -- (-3180.731) [-3179.933] (-3175.359) (...0 remote chains...) -- 0:00:02
+  2800 -- [-3178.675] (-3179.334) (-3175.907) (...0 remote chains...) -- 0:00:02
+  2900 -- (-3177.884) (-3178.679) [-3175.725] (...0 remote chains...) -- 0:00:02
+  3000 -- [-3183.660] (-3183.455) (-3177.395) (...0 remote chains...) -- 0:00:02
+  3100 -- (-3183.857) (-3182.564) [-3176.663] (...0 remote chains...) -- 0:00:02
+  3200 -- [-3177.747] (-3178.519) (-3177.544) (...0 remote chains...) -- 0:00:02
+  3300 -- (-3181.386) (-3184.541) [-3178.020] (...0 remote chains...) -- 0:00:02
+  3400 -- (-3182.371) [-3185.128] (-3181.083) (...0 remote chains...) -- 0:00:01
+  3500 -- (-3182.515) (-3179.762) [-3174.866] (...0 remote chains...) -- 0:00:01
+  3600 -- (-3179.668) (-3182.970) [-3176.612] (...0 remote chains...) -- 0:00:01
+  3700 -- [-3181.243] (-3177.449) (-3175.894) (...0 remote chains...) -- 0:00:01
+  3800 -- (-3183.391) [-3177.363] (-3187.934) (...0 remote chains...) -- 0:00:01
+  3900 -- [-3179.755] (-3178.066) (-3179.188) (...0 remote chains...) -- 0:00:01
+  4000 -- (-3177.601) [-3182.890] (-3191.013) (...0 remote chains...) -- 0:00:01
+  4100 -- [-3179.285] (-3186.012) (-3181.467) (...0 remote chains...) -- 0:00:01
+  4200 -- (-3174.977) (-3182.137) [-3180.715] (...0 remote chains...) -- 0:00:01
+  4300 -- (-3181.722) [-3177.675] (-3183.323) (...0 remote chains...) -- 0:00:01
+  4400 -- (-3181.677) (-3177.481) [-3177.413] (...0 remote chains...) -- 0:00:01
+  4500 -- (-3184.448) (-3178.871) [-3175.303] (...0 remote chains...) -- 0:00:01
+  4600 -- (-3176.243) (-3181.017) [-3175.882] (...0 remote chains...) -- 0:00:01
+  4700 -- (-3180.622) [-3178.454] (-3180.527) (...0 remote chains...) -- 0:00:01
+  4800 -- (-3180.101) (-3180.298) [-3181.911] (...0 remote chains...) -- 0:00:01
+  4900 -- (-3181.064) (-3182.369) [-3179.861] (...0 remote chains...) -- 0:00:01
+  5000 -- (-3188.662) (-3180.809) [-3184.637] (...0 remote chains...) -- 0:00:01
+  5100 -- (-3185.399) (-3179.386) [-3180.193] (...0 remote chains...) -- 0:00:00
+  5200 -- [-3178.530] (-3184.952) (-3182.459) (...0 remote chains...) -- 0:00:00
+  5300 -- [-3181.207] (-3180.581) (-3176.938) (...0 remote chains...) -- 0:00:00
+  5400 -- (-3180.739) (-3183.470) [-3179.982] (...0 remote chains...) -- 0:00:00
+  5500 -- (-3180.700) (-3189.751) [-3180.973] (...0 remote chains...) -- 0:00:00
+  5600 -- (-3180.058) [-3177.823] (-3183.134) (...0 remote chains...) -- 0:00:00
+  5700 -- (-3182.239) [-3175.863] (-3178.844) (...0 remote chains...) -- 0:00:00
+  5800 -- [-3181.594] (-3180.921) (-3177.854) (...0 remote chains...) -- 0:00:00
+  5900 -- (-3178.976) [-3176.637] (-3183.651) (...0 remote chains...) -- 0:00:00
+  6000 -- (-3178.751) (-3181.020) [-3180.931] (...0 remote chains...) -- 0:00:00
+  6100 -- (-3185.295) [-3178.022] (-3185.373) (...0 remote chains...) -- 0:00:00
+  6200 -- (-3178.910) (-3176.515) [-3177.963] (...0 remote chains...) -- 0:00:00
+  6300 -- (-3178.526) (-3183.908) [-3182.480] (...0 remote chains...) -- 0:00:00
+  6400 -- (-3179.070) (-3175.289) [-3176.517] (...0 remote chains...) -- 0:00:00
+  6500 -- (-3179.505) (-3175.041) [-3178.166] (...0 remote chains...) -- 0:00:00
+  6600 -- (-3181.207) (-3179.307) [-3182.194] (...0 remote chains...) -- 0:00:00
+  6700 -- (-3180.558) (-3187.935) [-3177.208] (...0 remote chains...) -- 0:00:00
+  6800 -- [-3179.523] (-3186.856) (-3185.596) (...0 remote chains...) -- 0:00:00
+  6900 -- [-3177.846] (-3188.226) (-3186.566) (...0 remote chains...) -- 0:00:00
+  7000 -- [-3174.438] (-3185.893) (-3184.419) (...0 remote chains...) -- 0:00:00
+  7100 -- (-3175.830) [-3180.214] (-3188.114) (...0 remote chains...) -- 0:00:00
+  7200 -- (-3192.618) (-3179.202) [-3184.984] (...0 remote chains...) -- 0:00:00
+  7300 -- (-3179.625) [-3178.574] (-3188.200) (...0 remote chains...) -- 0:00:00
+  7400 -- [-3177.943] (-3178.955) (-3184.526) (...0 remote chains...) -- 0:00:00
+  7500 -- [-3177.832] (-3184.152) (-3185.312) (...0 remote chains...) -- 0:00:00
+  7600 -- [-3178.656] (-3177.887) (-3177.706) (...0 remote chains...) -- 0:00:00
+  7700 -- [-3181.030] (-3177.182) (-3180.715) (...0 remote chains...) -- 0:00:00
+  7800 -- [-3182.045] (-3178.914) (-3181.496) (...0 remote chains...) -- 0:00:00
+  7900 -- (-3180.690) (-3180.140) [-3179.237] (...0 remote chains...) -- 0:00:00
+  8000 -- (-3176.862) [-3179.929] (-3177.647) (...0 remote chains...) -- 0:00:00
+  8100 -- (-3180.522) [-3180.500] (-3177.004) (...0 remote chains...) -- 0:00:00
+  8200 -- [-3173.789] (-3182.906) (-3178.900) (...0 remote chains...) -- 0:00:00
+  8300 -- (-3175.006) [-3181.191] (-3180.569) (...0 remote chains...) -- 0:00:00
+  8400 -- (-3176.404) (-3185.882) [-3181.845] (...0 remote chains...) -- 0:00:00
+  8500 -- [-3175.840] (-3187.558) (-3181.027) (...0 remote chains...) -- 0:00:00
+  8600 -- [-3178.297] (-3185.497) (-3182.782) (...0 remote chains...) -- 0:00:00
+  8700 -- (-3182.040) [-3184.675] (-3177.512) (...0 remote chains...) -- 0:00:00
+  8800 -- (-3183.134) (-3186.133) [-3178.788] (...0 remote chains...) -- 0:00:00
+  8900 -- (-3188.895) (-3181.771) [-3174.736] (...0 remote chains...) -- 0:00:00
+  9000 -- (-3187.810) [-3186.138] (-3179.241) (...0 remote chains...) -- 0:00:00
+  9100 -- [-3180.181] (-3186.477) (-3182.798) (...0 remote chains...) -- 0:00:00
+  9200 -- (-3179.645) (-3184.910) [-3182.335] (...0 remote chains...) -- 0:00:00
+  9300 -- [-3181.679] (-3181.828) (-3182.979) (...0 remote chains...) -- 0:00:00
+  9400 -- (-3184.177) [-3174.983] (-3183.720) (...0 remote chains...) -- 0:00:00
+  9500 -- (-3180.058) (-3173.813) [-3187.821] (...0 remote chains...) -- 0:00:00
+  9600 -- [-3184.156] (-3175.891) (-3178.472) (...0 remote chains...) -- 0:00:00
+  9700 -- [-3178.350] (-3183.075) (-3178.393) (...0 remote chains...) -- 0:00:00
+  9800 -- [-3178.134] (-3180.836) (-3177.996) (...0 remote chains...) -- 0:00:00
+  9900 -- (-3175.701) (-3180.680) [-3178.460] (...0 remote chains...) -- 0:00:00
+  10000 -- (-3183.803) [-3184.463] (-3186.167) (...0 remote chains...) -- 0:00:00
+
+  Analysis completed in 1 second
+  Analysis used 0.75 seconds of CPU time on processor 0
+  Log likelihood of best state for "cold" chain was -3172.44
+
+  Acceptance rates for the moves in the "cold" chain:
+     With prob.   (last 100)   chain accepted proposals by move
+        28.7 %     ( 30 %)     Dirichlet(Tratio)
+         NA           NA       Dirichlet(Pi)
+         NA           NA       Slider(Pi)
+        39.4 %     ( 40 %)     Multiplier(Alpha)
+         6.5 %     (  7 %)     ExtSPR(Tau,V)
+         6.0 %     (  5 %)     ExtTBR(Tau,V)
+         9.7 %     (  9 %)     NNI(Tau,V)
+         8.6 %     ( 17 %)     ParsSPR(Tau,V)
+        48.6 %     ( 46 %)     Multiplier(V)
+        29.2 %     ( 29 %)     Nodeslider(V)
+        17.3 %     ( 14 %)     TLMultiplier(V)
+
+  Chain swap information:
+
+             1     2     3
+       --------------------
+     1 |        0.78  0.62
+     2 |  3333        0.81
+     3 |  3333  3334
+
+  Upper diagonal: Proportion of successful state exchanges between chains
+  Lower diagonal: Number of attempted state exchanges between chains
+
+  Chain information:
+
+    ID -- Heat
+   -----------
+     1 -- 1.00  (cold chain)
+     2 -- 0.91
+     3 -- 0.83
+
+  Heat = 1 / (1 + T * (ID - 1))
+     (where T = 0.10 is the temperature and ID is the chain number)
+
+  Summarizing trees in file "algaemb.nex.t"
+  Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+  Writing statistics to files algaemb.nex.<parts|tstat|vstat|trprobs|con>
+  Examining file ...
+  Found one tree block in file "algaemb.nex.t" with 1001 trees in last block
+
+  Tree reading status:
+
+  0      10      20      30      40      50      60      70      80      90     100
+  v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+  *********************************************************************************
+
+  Read 1001 trees from last tree block (sampling 751 of them)
+
+  General explanation:
+
+  In an unrooted tree, a taxon bipartition (split) is specified by removing a
+  branch, thereby dividing the species into those to the left and those to the
+  right of the branch. Here, taxa to one side of the removed branch are denoted
+  '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
+  is used for the taxa on the same side as the outgroup.
+
+  In a rooted or clock tree, the tree is rooted using the model and not by
+  reference to an outgroup. Each bipartition therefore corresponds to a clade,
+  that is, a group that includes all the descendants of a particular branch in
+  the tree.  Taxa that are included in each clade are denoted using '*', and
+  taxa that are not included are denoted using the '.' symbol.
+
+  The output first includes a key to all the bipartitions with frequency larger
+  or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
+  sumt command and currently it is set to 0.10.  This is followed by a table
+  with statistics for the informative bipartitions (those including at least
+  two taxa), sorted from highest to lowest probability. For each bipartition,
+  the table gives the number of times the partition or split was observed in all
+  runs (#obs) and the posterior probability of the bipartition (Probab.), which
+  is the same as the split frequency. If several runs are summarized, this is
+  followed by the minimum split frequency (Min(s)), the maximum frequency
+  (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
+  The latter value should approach 0 for all bipartitions as MCMC runs converge.
+
+  This is followed by a table summarizing branch lengths, node heights (if a
+  clock model was used) and relaxed clock parameters (if a relaxed clock model
+  was used). The mean, variance, and 95 % credible interval are given for each
+  of these parameters. If several runs are summarized, the potential scale
+  reduction factor (PSRF) is also given; it should approach 1 as runs converge.
+  Node heights will take calibration points into account, if such points were
+  used in the analysis.
+
+  Note that Stddev may be unreliable if the partition is not present in all
+  runs (the last column indicates the number of runs that sampled the partition
+  if more than one run is summarized). The PSRF is not calculated at all if
+  the partition is not present in all runs.The PSRF is also sensitive to small
+  sample sizes and it should only be considered a rough guide to convergence
+  since some of the assumptions allowing one to interpret it as a true potential
+  scale reduction factor are violated in MrBayes.
+
+  List of taxa in bipartitions:
+
+     1 -- Tobacco
+     2 -- Rice
+     3 -- Marchantia
+     4 -- Chlamydomonas
+     5 -- Chlorella
+     6 -- Euglena
+     7 -- Anacystis_nidulans
+     8 -- Olithodiscus
+
+  Key to taxon bipartitions (saved to file "algaemb.nex.parts"):
+
+  ID -- Partition
+  --------------
+   1 -- *.......
+   2 -- .*......
+   3 -- ..*.....
+   4 -- ...*....
+   5 -- ....*...
+   6 -- .....*..
+   7 -- ******.*
+   8 -- .......*
+   9 -- **......
+  10 -- ***.....
+  11 -- ******..
+  12 -- ****....
+  13 -- *****...
+  14 -- ....**..
+  15 -- ***.**..
+  --------------
+
+  Summary statistics for informative taxon bipartitions
+     (saved to file "algaemb.nex.tstat"):
+
+  ID   #obs    Probab.
+  --------------------
+   9   750    0.998668
+  10   750    0.998668
+  11   705    0.938748
+  12   546    0.727031
+  13   410    0.545939
+  14   305    0.406125
+  15    77    0.102530
+  --------------------
+
+  Summary statistics for branch and node parameters
+     (saved to file "algaemb.nex.vstat"):
+
+                                          95% HPD Interval
+                                        --------------------
+  Parameter      Mean       Variance     Lower       Upper       Median
+  ---------------------------------------------------------------------
+  length[1]     0.008716    0.000012    0.003658    0.016999    0.008317
+  length[2]     0.023098    0.000030    0.013470    0.032547    0.022170
+  length[3]     0.007583    0.000010    0.002542    0.014124    0.007290
+  length[4]     0.103776    0.000234    0.075950    0.131908    0.100639
+  length[5]     0.027841    0.000088    0.010881    0.045746    0.026844
+  length[6]     0.135383    0.000531    0.092721    0.176857    0.132233
+  length[7]     0.110735    0.000353    0.073551    0.143705    0.109509
+  length[8]     0.106708    0.000381    0.069207    0.143225    0.106487
+  length[9]     0.019920    0.000026    0.010314    0.029738    0.019685
+  length[10]    0.031247    0.000077    0.017551    0.050511    0.030029
+  length[11]    0.034688    0.000194    0.010927    0.062223    0.033151
+  length[12]    0.014105    0.000058    0.001091    0.027874    0.013836
+  length[13]    0.021858    0.000083    0.006954    0.041610    0.021989
+  length[14]    0.019120    0.000072    0.003505    0.034342    0.018058
+  length[15]    0.005876    0.000021    0.000970    0.013912    0.003485
+  ---------------------------------------------------------------------
+
+  Clade credibility values:
+
+  /---------------------------------------------------------- Anacystis_nidul~ (7)
+  |
+  |---------------------------------------------------------- Olithodiscus (8)
+  |
+  |                                               /---------- Tobacco (1)
+  |                                      /---100--+
+  |                                      |        \\---------- Rice (2)
+  +                            /---100---+
+  |                            |         \\------------------- Marchantia (3)
+  |                  /----73---+
+  |                  |         \\----------------------------- Chlamydomonas (4)
+  |         /---55---+
+  |         |        \\--------------------------------------- Chlorella (5)
+  \\----94---+
+            \\------------------------------------------------ Euglena (6)
+
+  Phylogram (based on average branch lengths):
+
+  /--------------------------------------- Anacystis_nidul~ (7)
+  |
+  |-------------------------------------- Olithodiscus (8)
+  |
+  |                                          /--- Tobacco (1)
+  |                                   /------+
+  |                                   |      \\-------- Rice (2)
+  +                        /----------+
+  |                        |          \\-- Marchantia (3)
+  |                   /----+
+  |                   |    \\------------------------------------ Chlamydomonas (4)
+  |           /-------+
+  |           |       \\--------- Chlorella (5)
+  \\-----------+
+              \\----------------------------------------------- Euglena (6)
+
+  |----------------| 0.050 expected changes per site
+
+  Calculating tree probabilities...
+
+  Credible sets of trees (18 trees sampled):
+     50 % credible set contains 2 trees
+     90 % credible set contains 5 trees
+     95 % credible set contains 8 trees
+     99 % credible set contains 13 trees
+
+```
+
+Exiting mrbayes block
+Reached end of file
+
+MrBayes > exit
+
+Could not find command "exit"
+
+MrBayes > ls
+
+Expecting  parameter
+
+MrBayes > quit
+
+Deleting previously defined characters
+Deleting previously defined taxa
+Quitting program
+
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ ls
+algaemb.nex       algaemb.nex.con.tre  algaemb.nex.parts    algaemb.nex.tstat            mbblock.txt
+algaemb.nex.ckp   algaemb.nex.mcmc     algaemb.nex.t        algaemb.nex.vstat
+algaemb.nex.ckp~  algaemb.nex.p        algaemb.nex.trprobs  algaemb.nex:Zone.Identifier
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ conda install -c bioconda seqmagick
+Channels:
+
+- bioconda
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan
+
+environment location: /home/suki/miniconda3
+
+added / updated specs:
+- seqmagick
+
+The following packages will be downloaded:
+
+```
+package                    |            build
+---------------------------|-----------------
+biopython-1.78             |  py312h5eee18b_0         2.6 MB
+blas-1.0                   |              mkl           6 KB
+conda-25.3.0               |  py312h06a4308_2         1.1 MB
+intel-openmp-2023.1.0      |   hdb19cb5_46306        17.2 MB
+mkl-2023.1.0               |   h213fc3f_46344       171.5 MB
+mkl-service-2.4.0          |  py312h5eee18b_2          67 KB
+mkl_fft-1.3.11             |  py312h5eee18b_0         205 KB
+mkl_random-1.2.8           |  py312h526ad5a_0         324 KB
+numpy-1.26.4               |  py312hc5e2394_0          11 KB
+numpy-base-1.26.4          |  py312h0da6c21_0         7.7 MB
+seqmagick-0.8.0            |             py_0          44 KB  bioconda
+tbb-2021.8.0               |       hdb19cb5_0         1.6 MB
+------------------------------------------------------------
+                                       Total:       202.4 MB
+
+```
+
+The following NEW packages will be INSTALLED:
+
+biopython          pkgs/main/linux-64::biopython-1.78-py312h5eee18b_0
+blas               pkgs/main/linux-64::blas-1.0-mkl
+intel-openmp       pkgs/main/linux-64::intel-openmp-2023.1.0-hdb19cb5_46306
+mkl                pkgs/main/linux-64::mkl-2023.1.0-h213fc3f_46344
+mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py312h5eee18b_2
+mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.11-py312h5eee18b_0
+mkl_random         pkgs/main/linux-64::mkl_random-1.2.8-py312h526ad5a_0
+numpy              pkgs/main/linux-64::numpy-1.26.4-py312hc5e2394_0
+numpy-base         pkgs/main/linux-64::numpy-base-1.26.4-py312h0da6c21_0
+seqmagick          bioconda/noarch::seqmagick-0.8.0-py_0
+tbb                pkgs/main/linux-64::tbb-2021.8.0-hdb19cb5_0
+
+The following packages will be UPDATED:
+
+ca-certificates                     2024.12.31-h06a4308_0 --> 2025.2.25-h06a4308_0
+conda                              25.1.1-py312h06a4308_0 --> 25.3.0-py312h06a4308_2
+openssl                                 3.0.15-h5eee18b_0 --> 3.0.16-h5eee18b_0
+
+Proceed ([y]/n)? y
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ seqmagick convert fixed_aligned_sequences.fasta fixed_aligned_sequences.nex
+Traceback (most recent call last):
+File "/home/suki/miniconda3/bin/seqmagick", line 10, in <module>
+sys.exit(main())
+^^^^^^
+File "/home/suki/miniconda3/lib/python3.12/site-packages/seqmagick/scripts/cli.py", line 12, in main
+action, arguments = parse_arguments(argv)
+^^^^^^^^^^^^^^^^^^^^^
+File "/home/suki/miniconda3/lib/python3.12/site-packages/seqmagick/scripts/cli.py", line 58, in parse_arguments
+for name, mod in subcommands.itermodules():
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/suki/miniconda3/lib/python3.12/site-packages/seqmagick/subcommands/**init**.py", line 8, in itermodules
+**import**('%s.%s' % (root, command), fromlist=[command]))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/suki/miniconda3/lib/python3.12/site-packages/seqmagick/subcommands/convert.py", line 9, in <module>
+from Bio import Alphabet, SeqIO
+File "/home/suki/miniconda3/lib/python3.12/site-packages/Bio/Alphabet/**init**.py", line 20, in <module>
+raise ImportError(
+ImportError: Bio.Alphabet has been removed from Biopython. In many cases, the alphabet can simply be ignored and removed from scripts. In a few cases, you may need to specify the `molecule_type` as an annotation on a SeqRecord for your script to work correctly. Please see https://biopython.org/wiki/Alphabet for more information.
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ conda remove seqmagick
+Channels:
+
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan
+
+environment location: /home/suki/miniconda3
+
+removed specs:
+- seqmagick
+
+The following packages will be REMOVED:
+
+biopython-1.78-py312h5eee18b_0
+blas-1.0-mkl
+intel-openmp-2023.1.0-hdb19cb5_46306
+mkl-2023.1.0-h213fc3f_46344
+mkl-service-2.4.0-py312h5eee18b_2
+mkl_fft-1.3.11-py312h5eee18b_0
+mkl_random-1.2.8-py312h526ad5a_0
+numpy-1.26.4-py312hc5e2394_0
+numpy-base-1.26.4-py312h0da6c21_0
+seqmagick-0.8.0-py_0
+tbb-2021.8.0-hdb19cb5_0
+
+Proceed ([y]/n)? y
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ conda install -c bioconda amas
+Channels:
+
+- bioconda
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan
+
+environment location: /home/suki/miniconda3
+
+added / updated specs:
+- amas
+
+The following packages will be downloaded:
+
+```
+package                    |            build
+---------------------------|-----------------
+amas-1.0                   |     pyh864c0ab_0          26 KB  bioconda
+------------------------------------------------------------
+                                       Total:          26 KB
+
+```
+
+The following NEW packages will be INSTALLED:
+
+amas               bioconda/noarch::amas-1.0-pyh864c0ab_0
+
+Proceed ([y]/n)? y
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ [AMAS.py](http://amas.py/) convert -i fixed_aligned_sequences.fasta -f fasta -u nexus
+usage: [AMAS.py](http://amas.py/) [-h] [-u {fasta,phylip,nexus,phylip-int,nexus-int}] [-e] [-c CORES] -i IN_FILES [IN_FILES ...] -f
+{fasta,phylip,nexus,phylip-int,nexus-int} -d {aa,dna}
+[AMAS.py](http://amas.py/): error: the following arguments are required: -d/--data-type
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ [AMAS.py](http://amas.py/) convert -i fixed_aligned_sequences.fasta -f fasta -d dna -u nexus
+Converted 1 files from fasta to nexus
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ ls
+algaemb.nex          algaemb.nex.mcmc   algaemb.nex.trprobs          fixed_aligned_sequences.fasta
+algaemb.nex.ckp      algaemb.nex.p      algaemb.nex.tstat            fixed_aligned_sequences.fasta-out.nex
+algaemb.nex.ckp~     algaemb.nex.parts  algaemb.nex.vstat            fixed_aligned_sequences.fasta:Zone.Identifier
+algaemb.nex.con.tre  algaemb.nex.t      algaemb.nex:Zone.Identifier  mbblock.txt
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$ mb
+
+```
+                        MrBayes 3.2.7a x86_64
+
+                  (Bayesian Analysis of Phylogeny)
+
+                         (Parallel version)
+                     (1 processors available)
+
+          Distributed under the GNU General Public License
+
+           Type "help" or "help <command>" for information
+                 on the commands that are available.
+
+               Type "about" for authorship and general
+                   information about the program.
+
+```
+
+MrBayes > execute fixed_aligned_sequences.fasta-out.nex
+
+Executing file "fixed_aligned_sequences.fasta-out.nex"
+UNIX line termination
+Longest line length = 267550
+Parsing file
+Expecting NEXUS formatted file
+Reading data block
+Allocated taxon set
+Allocated matrix
+Defining new matrix with 12 taxa and 267535 characters
+Data is Dna
+Gaps coded as -
+Missing data coded as ?
+Taxon  1 -> MT934442.1
+Error while parsing a string. Token "GTTAGTC-------------...[followed by at least 99970  more charectors]" is too long.
+Maximum allowed length of a token is 99990
+There was an error on at least one processor
+The error occurred when reading char. 112829-112848 on line 7
+in the file 'fixed_aligned_sequences.fasta-out.nex'
+
+Returning execution to command line ...
+
+Error in command "Execute"
+
+MrBayes > execute mbblock_d01.txt
+
+Executing file "mbblock_d01.txt"
+DOS line termination
+Longest line length = 84
+Parsing file
+Reading mrbayes block
+Setting autoclose to yes
+Setting nowarnings to yes
+A matrix must be specified before the model can be defined
+Error when setting parameter "Nst" (1)
+There was an error on at least one processor
+The error occurred when reading char. 10-12 on line 4
+in the file 'mbblock_d01.txt'
+
+Returning execution to command line ...
+
+Error in command "Execute"
+
+MrBayes > quit
+
+Deleting previously defined characters
+Deleting previously defined taxa
+Quitting program
+
+(base) suki@LAPTOP-5PMP3V9O:~/phylo-class/Bayesian-exercise$

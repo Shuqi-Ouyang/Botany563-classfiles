@@ -1,0 +1,1145 @@
+rosoft Windows [Version 10.0.26100.3476]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\欧阳葭>wsl
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+- Documentation: [https://help.ubuntu.com](https://help.ubuntu.com/)
+- Management: [https://landscape.canonical.com](https://landscape.canonical.com/)
+- Support: https://ubuntu.com/pro
+
+System information as of Thu Apr  3 13:14:12 CDT 2025
+
+System load:  0.15                Processes:             57
+Usage of /:   0.4% of 1006.85GB   Users logged in:       0
+Memory usage: 3%                  IPv4 address for eth0: 172.19.133.12
+Swap usage:   0%
+
+- Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+just raised the bar for easy, resilient and secure K8s cluster deployment.
+    
+    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+    
+
+This message is shown once a day. To disable it please create the
+/home/suki/.hushlogin file.
+(base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ conda install -c bioconda mrbayes
+Retrieving notices: done
+Channels:
+
+- bioconda
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+LibMambaUnsatisfiableError: Encountered problems while solving:
+
+- package python-3.12.9-h5148396_0 requires ncurses >=6.4,<7.0a0, but none of the providers can be installed
+
+Could not solve for environment specs
+The following packages are incompatible
+├─ mrbayes =* * is installable with the potential options
+│  ├─ mrbayes [3.2.7|3.2.7a] would require
+│  │  └─ ncurses >=6.1,<6.2.0a0 *, which can be installed;
+│  ├─ mrbayes 3.2.6 would require
+│  │  └─ readline =6 *, which does not exist (perhaps a missing channel);
+│  ├─ mrbayes 3.2.7 would require
+│  │  └─ openmpi >=4.1.0,<5.0a0 *, which does not exist (perhaps a missing channel);
+│  ├─ mrbayes 3.2.7 would require
+│  │  └─ libgcc-ng >=12 *, which does not exist (perhaps a missing channel);
+│  ├─ mrbayes 3.2.7 would require
+│  │  └─ openmpi >=4.1.2,<5.0a0 *, which does not exist (perhaps a missing channel);
+│  ├─ mrbayes 3.2.7 would require
+│  │  └─ libgcc >=13 *, which does not exist (perhaps a missing channel);
+│  └─ mrbayes 3.2.7 would require
+│     └─ openmpi >=4.0.5,<4.1.0a0 , which does not exist (perhaps a missing channel);
+├─ pin on python 3.12. =* * is installable and it requires
+│  └─ python =3.12 *, which can be installed;
+└─ pip =* * is not installable because there are no viable options
+├─ pip [10.0.1|18.1|...|9.0.3] would require
+│  └─ python >=2.7,<2.8.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [10.0.1|9.0.1|9.0.3] would require
+│  └─ python >=3.5,<3.6.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [10.0.1|18.1|...|9.0.3] would require
+│  └─ python >=3.6,<3.7.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [10.0.1|18.1|...|22.3.1] would require
+│  └─ python >=3.7,<3.8.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [19.3.1|20.0.2|...|24.2] would require
+│  └─ python >=3.8,<3.9.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [20.2.2|20.2.3|...|25.0] would require
+│  └─ python >=3.9,<3.10.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [21.2.4|22.1.2|...|25.0] would require
+│  └─ python >=3.10,<3.11.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [22.2.2|22.3.1|...|25.0] would require
+│  └─ python >=3.11,<3.12.0a0 *, which conflicts with any installable versions previously reported;
+├─ pip [23.2.1|23.3|...|25.0] would require
+│  └─ python =* * but there are no viable options
+│     ├─ python [3.12.0|3.12.1|...|3.12.9] would require
+│     │  └─ ncurses >=6.4,<7.0a0 *, which conflicts with any installable versions previously reported;
+│     ├─ python [2.7.13|2.7.14|...|2.7.18] conflicts with any installable versions previously reported;
+│     ├─ python [3.10.0|3.10.10|...|3.10.9] conflicts with any installable versions previously reported;
+│     ├─ python [3.11.0|3.11.10|...|3.11.9] conflicts with any installable versions previously reported;
+│     ├─ python [3.13.0|3.13.1|3.13.2] conflicts with any installable versions previously reported;
+│     ├─ python [3.5.4|3.5.5|3.5.6] conflicts with any installable versions previously reported;
+│     ├─ python [3.6.10|3.6.12|...|3.6.9] conflicts with any installable versions previously reported;
+│     ├─ python [3.7.0|3.7.1|...|3.7.9] conflicts with any installable versions previously reported;
+│     ├─ python [3.8.0|3.8.1|...|3.8.8] conflicts with any installable versions previously reported;
+│     └─ python [3.9.0|3.9.1|...|3.9.7] conflicts with any installable versions previously reported;
+├─ pip [24.0|24.2|25.0] would require
+│  └─ python >=3.13,<3.14.0a0 *, which conflicts with any installable versions previously reported;
+└─ pip 25.0 would require
+└─ python >=3.12,<3.13.0a0 *, which cannot be installed (as previously explained).
+
+Pins seem to be involved in the conflict. Currently pinned specs:
+
+- python=3.12
+
+(base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ python version
+python: can't open file '/mnt/c/Users/欧阳葭/version': [Errno 2] No such file or directory
+(base) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ conda create -n mrbayes-env python=3.11
+conda activate mrbayes-env
+conda install -c conda-forge -c bioconda mrbayes
+Channels:
+
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+==> WARNING: A newer version of conda exists. <==
+current version: 25.1.1
+latest version: 25.3.0
+
+Please update conda by running
+
+```
+$ conda update -n base -c defaults conda
+
+```
+
+## Package Plan
+
+environment location: /home/suki/miniconda3/envs/mrbayes-env
+
+added / updated specs:
+- python=3.11
+
+The following packages will be downloaded:
+
+```
+package                    |            build
+---------------------------|-----------------
+pip-25.0                   |  py311h06a4308_0         2.9 MB
+python-3.11.11             |       he870216_0        32.9 MB
+setuptools-75.8.0          |  py311h06a4308_0         2.2 MB
+wheel-0.45.1               |  py311h06a4308_0         151 KB
+------------------------------------------------------------
+                                       Total:        38.1 MB
+
+```
+
+The following NEW packages will be INSTALLED:
+
+_libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+_openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6
+ca-certificates    pkgs/main/linux-64::ca-certificates-2025.2.25-h06a4308_0
+ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.40-h12ee557_0
+libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1
+libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0
+ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+openssl            pkgs/main/linux-64::openssl-3.0.16-h5eee18b_0
+pip                pkgs/main/linux-64::pip-25.0-py311h06a4308_0
+python             pkgs/main/linux-64::python-3.11.11-he870216_0
+readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
+setuptools         pkgs/main/linux-64::setuptools-75.8.0-py311h06a4308_0
+sqlite             pkgs/main/linux-64::sqlite-3.45.3-h5eee18b_0
+tk                 pkgs/main/linux-64::tk-8.6.14-h39e8969_0
+tzdata             pkgs/main/noarch::tzdata-2025a-h04d1e81_0
+wheel              pkgs/main/linux-64::wheel-0.45.1-py311h06a4308_0
+xz                 pkgs/main/linux-64::xz-5.6.4-h5eee18b_1
+zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1
+
+Proceed ([y]/n)? y
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+# 
+
+# To activate this environment, use
+
+# 
+
+# $ conda activate mrbayes-env
+
+# 
+
+# To deactivate an active environment, use
+
+# 
+
+# $ conda deactivate
+
+Channels:
+
+- conda-forge
+- bioconda
+- defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+==> WARNING: A newer version of conda exists. <==
+current version: 25.1.1
+latest version: 25.3.0
+
+Please update conda by running
+
+```
+$ conda update -n base -c defaults conda
+
+```
+
+## Package Plan
+
+environment location: /home/suki/miniconda3/envs/mrbayes-env
+
+added / updated specs:
+- mrbayes
+
+The following packages will be downloaded:
+
+```
+package                    |            build
+---------------------------|-----------------
+alsa-lib-1.2.3.2           |       h166bdaf_0         554 KB  conda-forge
+beagle-lib-3.1.2           |       h9f5acd7_4         227 KB  bioconda
+cairo-1.16.0               |       hb05425b_5         1.2 MB
+fontconfig-2.14.1          |       h4c34cd2_2         281 KB
+freetype-2.10.4            |       h0708190_1         890 KB  conda-forge
+giflib-5.2.1               |       h36c2ea0_2          77 KB  conda-forge
+glib-2.78.4                |       h6a678d5_0         508 KB
+glib-tools-2.78.4          |       h6a678d5_0         115 KB
+graphite2-1.3.14           |       h295c915_1          97 KB
+harfbuzz-2.8.1             |       h6f93f22_0         1.1 MB
+icu-58.2                   |    hf484d3e_1000        22.6 MB  conda-forge
+jbig-2.1                   |    h7f98852_2003          43 KB  conda-forge
+jpeg-9e                    |       h166bdaf_1         268 KB  conda-forge
+lcms2-2.12                 |       hddcbb42_0         443 KB  conda-forge
+lerc-2.2.1                 |       h9c3ff4c_0         213 KB  conda-forge
+libdeflate-1.7             |       h7f98852_5          67 KB  conda-forge
+libglib-2.78.4             |       hdc74915_0         1.5 MB
+libiconv-1.17              |       h166bdaf_0         1.4 MB  conda-forge
+libpng-1.6.39              |       h5eee18b_0         304 KB
+libtiff-4.3.0              |       hf544144_1         668 KB  conda-forge
+libtool-2.4.6              |    h9c3ff4c_1008         511 KB  conda-forge
+libwebp-base-1.2.2         |       h7f98852_1         824 KB  conda-forge
+libxcb-1.15                |       h7f8727e_0         505 KB
+libxml2-2.10.4             |       hcbfbd50_0         755 KB
+lz4-c-1.9.3                |       h9c3ff4c_1         179 KB  conda-forge
+mpi-1.0                    |          openmpi           4 KB  conda-forge
+mrbayes-3.2.7              |       h5465cc4_4         6.0 MB  bioconda
+openjdk-11.0.9.1           |       h5cc2fde_1       173.5 MB  conda-forge
+openmpi-4.1.3              |       h8b79891_4           9 KB  conda-forge
+pixman-0.40.0              |       h36c2ea0_0         627 KB  conda-forge
+xorg-fixesproto-5.0        |    h7f98852_1002           9 KB  conda-forge
+xorg-inputproto-2.3.2      |    h7f98852_1002          19 KB  conda-forge
+xorg-kbproto-1.0.7         |    h7f98852_1002          27 KB  conda-forge
+xorg-libx11-1.7.2          |       h7f98852_0         941 KB  conda-forge
+xorg-libxext-1.3.4         |       h7f98852_1          54 KB  conda-forge
+xorg-libxfixes-5.0.3       |    h7f98852_1004          18 KB  conda-forge
+xorg-libxi-1.7.10          |       h7f98852_0          46 KB  conda-forge
+xorg-libxrender-0.9.10     |    h7f98852_1003          32 KB  conda-forge
+xorg-libxtst-1.2.3         |    h7f98852_1002          31 KB  conda-forge
+xorg-recordproto-1.14.2    |    h7f98852_1002           8 KB  conda-forge
+xorg-renderproto-0.11.1    |    h7f98852_1002           9 KB  conda-forge
+xorg-xextproto-7.3.0       |    h7f98852_1002          28 KB  conda-forge
+xorg-xproto-7.0.31         |    h7f98852_1007          73 KB  conda-forge
+zstd-1.5.0                 |       ha95c52a_0         490 KB  conda-forge
+------------------------------------------------------------
+                                       Total:       216.8 MB
+
+```
+
+The following NEW packages will be INSTALLED:
+
+alsa-lib           conda-forge/linux-64::alsa-lib-1.2.3.2-h166bdaf_0
+beagle-lib         bioconda/linux-64::beagle-lib-3.1.2-h9f5acd7_4
+cairo              pkgs/main/linux-64::cairo-1.16.0-hb05425b_5
+expat              pkgs/main/linux-64::expat-2.6.4-h6a678d5_0
+fontconfig         pkgs/main/linux-64::fontconfig-2.14.1-h4c34cd2_2
+freetype           conda-forge/linux-64::freetype-2.10.4-h0708190_1
+giflib             conda-forge/linux-64::giflib-5.2.1-h36c2ea0_2
+glib               pkgs/main/linux-64::glib-2.78.4-h6a678d5_0
+glib-tools         pkgs/main/linux-64::glib-tools-2.78.4-h6a678d5_0
+graphite2          pkgs/main/linux-64::graphite2-1.3.14-h295c915_1
+harfbuzz           pkgs/main/linux-64::harfbuzz-2.8.1-h6f93f22_0
+icu                conda-forge/linux-64::icu-58.2-hf484d3e_1000
+jbig               conda-forge/linux-64::jbig-2.1-h7f98852_2003
+jpeg               conda-forge/linux-64::jpeg-9e-h166bdaf_1
+lcms2              conda-forge/linux-64::lcms2-2.12-hddcbb42_0
+lerc               conda-forge/linux-64::lerc-2.2.1-h9c3ff4c_0
+libdeflate         conda-forge/linux-64::libdeflate-1.7-h7f98852_5
+libglib            pkgs/main/linux-64::libglib-2.78.4-hdc74915_0
+libiconv           conda-forge/linux-64::libiconv-1.17-h166bdaf_0
+libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0
+libtiff            conda-forge/linux-64::libtiff-4.3.0-hf544144_1
+libtool            conda-forge/linux-64::libtool-2.4.6-h9c3ff4c_1008
+libwebp-base       conda-forge/linux-64::libwebp-base-1.2.2-h7f98852_1
+libxcb             pkgs/main/linux-64::libxcb-1.15-h7f8727e_0
+libxml2            pkgs/main/linux-64::libxml2-2.10.4-hcbfbd50_0
+lz4-c              conda-forge/linux-64::lz4-c-1.9.3-h9c3ff4c_1
+mpi                conda-forge/linux-64::mpi-1.0-openmpi
+mrbayes            bioconda/linux-64::mrbayes-3.2.7-h5465cc4_4
+openjdk            conda-forge/linux-64::openjdk-11.0.9.1-h5cc2fde_1
+openmpi            conda-forge/noarch::openmpi-4.1.3-h8b79891_4
+pcre2              pkgs/main/linux-64::pcre2-10.42-hebb0a14_1
+pixman             conda-forge/linux-64::pixman-0.40.0-h36c2ea0_0
+xorg-fixesproto    conda-forge/linux-64::xorg-fixesproto-5.0-h7f98852_1002
+xorg-inputproto    conda-forge/linux-64::xorg-inputproto-2.3.2-h7f98852_1002
+xorg-kbproto       conda-forge/linux-64::xorg-kbproto-1.0.7-h7f98852_1002
+xorg-libx11        conda-forge/linux-64::xorg-libx11-1.7.2-h7f98852_0
+xorg-libxext       conda-forge/linux-64::xorg-libxext-1.3.4-h7f98852_1
+xorg-libxfixes     conda-forge/linux-64::xorg-libxfixes-5.0.3-h7f98852_1004
+xorg-libxi         conda-forge/linux-64::xorg-libxi-1.7.10-h7f98852_0
+xorg-libxrender    conda-forge/linux-64::xorg-libxrender-0.9.10-h7f98852_1003
+xorg-libxtst       conda-forge/linux-64::xorg-libxtst-1.2.3-h7f98852_1002
+xorg-recordproto   conda-forge/linux-64::xorg-recordproto-1.14.2-h7f98852_1002
+xorg-renderproto   conda-forge/linux-64::xorg-renderproto-0.11.1-h7f98852_1002
+xorg-xextproto     conda-forge/linux-64::xorg-xextproto-7.3.0-h7f98852_1002
+xorg-xproto        conda-forge/linux-64::xorg-xproto-7.0.31-h7f98852_1007
+zstd               conda-forge/linux-64::zstd-1.5.0-ha95c52a_0
+
+Proceed ([y]/n)? y
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ pwd
+/mnt/c/Users/欧阳葭
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ begin mrbayes;
+set autoclose=yes;
+prset brlenspr=unconstrained:exp(10.0);
+prset shapepr=exp(1.0);
+prset tratiopr=beta(1.0,1.0);
+prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+lset nst=2 rates=gamma ngammacat=4;
+mcmcp ngen=10000 samplefreq=10 printfreq=100 nruns=1 nchains=3 savebrlens=yes;
+outgroup Anacystis_nidulans;
+mcmc;
+sumt;
+end;
+begin: command not found
+-bash: syntax error near unexpected token `(' -bash: syntax error near unexpected token` ('
+-bash: syntax error near unexpected token `(' -bash: syntax error near unexpected token` ('
+Command 'lset' not found, did you mean:
+command 'tset' from deb ncurses-bin (6.4+20231209-1)
+command 'xset' from deb x11-xserver-utils (7.7+10)
+command 'cset' from deb cpuset (1.6.2-1)
+Try: sudo apt install <deb name>
+mcmcp: command not found
+outgroup: command not found
+Command 'mcmc' not found, did you mean:
+command 'mmc' from deb mmc-utils (0+git20220624.d7b343fd-1ubuntu1)
+Try: sudo apt install <deb name>
+Command 'sumt' not found, did you mean:
+command 'smt' from snap smt (0.2)
+command 'sumo' from deb sumo (1.18.0+dfsg-3build2)
+command 'sbmt' from deb atfs (1.4pl6-16)
+command 'sum' from deb coreutils (9.4-2ubuntu2)
+See 'snap info <snapname>' for additional versions.
+Command 'end' not found, but there are 14 similar ones.
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ mb
+execute /mnt/c/Users/欧阳葭/Desktop/algaemb.nex
+Illegal instruction (core dumped)
+execute: command not found
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ mb
+Illegal instruction (core dumped)
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+[sudo] password for suki:
+==> This script will install:
+/home/linuxbrew/.linuxbrew/bin/brew
+/home/linuxbrew/.linuxbrew/share/doc/homebrew
+/home/linuxbrew/.linuxbrew/share/man/man1/brew.1
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+/home/linuxbrew/.linuxbrew/etc/bash_completion.d/brew
+/home/linuxbrew/.linuxbrew/Homebrew
+==> The following new directories will be created:
+/home/linuxbrew/.linuxbrew/bin
+/home/linuxbrew/.linuxbrew/etc
+/home/linuxbrew/.linuxbrew/include
+/home/linuxbrew/.linuxbrew/lib
+/home/linuxbrew/.linuxbrew/sbin
+/home/linuxbrew/.linuxbrew/share
+/home/linuxbrew/.linuxbrew/var
+/home/linuxbrew/.linuxbrew/opt
+/home/linuxbrew/.linuxbrew/share/zsh
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions
+/home/linuxbrew/.linuxbrew/var/homebrew
+/home/linuxbrew/.linuxbrew/var/homebrew/linked
+/home/linuxbrew/.linuxbrew/Cellar
+/home/linuxbrew/.linuxbrew/Caskroom
+/home/linuxbrew/.linuxbrew/Frameworks
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/bin/install -d -o suki -g suki -m 0755 /home/linuxbrew/.linuxbrew
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions
+==> /usr/bin/sudo /bin/chown suki /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chgrp suki /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/chown -R suki:suki /home/linuxbrew/.linuxbrew/Homebrew
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 298296, done.
+remote: Counting objects: 100% (226/226), done.
+remote: Compressing objects: 100% (143/143), done.
+remote: Total 298296 (delta 130), reused 132 (delta 83), pack-reused 298070 (from 3)
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Total 55 (delta 33), reused 33 (delta 33), pack-reused 22 (from 1)
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ece69c4b930308e50187f2df4f909026610a943cefa5e2b5942a327e3ad0d8f8
+###################################################################### 100.0%
+==> Pouring portable-ruby-3.3.7.x86_64_linux.bottle.tar.gz
+Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
+Instructions on how to configure your shell for Homebrew
+can be found in the 'Next steps' section below.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+
+- Run these commands in your terminal to add Homebrew to your PATH:
+echo >> /home/suki/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/suki/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+- Install Homebrew's dependencies if you have sudo access:
+sudo apt-get install build-essential
+For more information, see:
+https://docs.brew.sh/Homebrew-on-Linux
+- We recommend that you install GCC:
+brew install gcc
+- Run brew help to get started
+- Further documentation:
+[https://docs.brew.sh](https://docs.brew.sh/)
+
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$  echo >> /home/suki/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/suki/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$  sudo apt-get install build-essential
+[sudo] password for suki:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot
+g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13
+gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+libcrypt-dev libde265-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc
+libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 liblsan0
+libmpc3 libquadmath0 libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev
+lto-disabled-list make manpages-dev rpcsvc-proto
+Suggested packages:
+cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib
+g++-13-multilib gcc-13-doc gcc-multilib autoconf automake libtool flex
+bison gdb gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu glibc-doc bzr
+libgd-tools libheif-plugin-x265 libheif-plugin-ffmpegdec
+libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec
+libheif-plugin-j2kenc libheif-plugin-rav1e libheif-plugin-svtenc
+libstdc++-13-doc make-doc
+The following NEW packages will be installed:
+build-essential cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu
+dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu
+gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+libcrypt-dev libde265-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc
+libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 liblsan0
+libmpc3 libquadmath0 libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev
+lto-disabled-list make manpages-dev rpcsvc-proto
+0 upgraded, 52 newly installed, 0 to remove and 29 not upgraded.
+Need to get 71.2 MB of archives.
+After this operation, 242 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.4 [20.4 kB]
+Ign:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-55.57
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1 [112 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7 [67.4 kB]
+Err:2 http://security.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-55.57
+404  Not Found [IP: 185.125.190.81 80]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.4 [2124 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04 [51.5 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [10.7 MB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04 [1038 B]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04 [48.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04 [148 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04 [29.7 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04 [10.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04 [3031 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04 [1322 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04 [2772 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04 [1184 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04 [1641 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04 [153 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04 [2681 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [21.1 MB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04 [494 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1212 B]
+Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5018 B]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04 [2420 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [12.2 MB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04 [16.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [964 B]
+Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1 [1100 B]
+Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.1 [269 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47 [12.4 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.1 [1074 kB]
+Get:37 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1 [4928 B]
+Get:38 http://archive.ubuntu.com/ubuntu noble/main amd64 libfakeroot amd64 1.33-1 [32.4 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 fakeroot amd64 1.33-1 [67.2 kB]
+Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+Get:41 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-xs-perl amd64 0.04-8build3 [11.2 kB]
+Get:42 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-merge-perl all 0.08-5 [11.4 kB]
+Get:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.1 [1941 kB]
+Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.1 [10.4 kB]
+Get:45 http://archive.ubuntu.com/ubuntu noble/main amd64 libde265-0 amd64 1.0.15-1build3 [166 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-libde265 amd64 1.17.6-1ubuntu4.1 [8176 B]
+Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.1 [275 kB]
+Get:48 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5 [128 kB]
+Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.4 [29.3 kB]
+Get:50 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-fcntllock-perl amd64 0.22-4ubuntu5 [30.7 kB]
+Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.1 [14.7 kB]
+Get:52 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages-dev all 6.7-2 [2013 kB]
+Fetched 69.4 MB in 4s (17.9 MB/s)
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_6.8.0-55.57_amd64.deb  404  Not Found [IP: 185.125.190.81 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ brew reinstall -s mrbayes
+Error: The following flag:
+--build-from-source
+requires building tools, but none are installed.
+Install Clang or run `brew install gcc`. Alternatively, remove the flag to attempt bottle installation.
+
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ brew reinstall -s beagle
+Error: The following flag:
+--build-from-source
+requires building tools, but none are installed.
+Install Clang or run `brew install gcc`. Alternatively, remove the flag to attempt bottle installation.
+
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ sudo apt update
+sudo apt install build-essential
+[sudo] password for suki:
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [734 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [140 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [8936 B]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [7068 B]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [828 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [180 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.0 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [17.0 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [844 kB]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [170 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 c-n-f Metadata [468 B]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [17.6 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [3792 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [380 B]
+Get:20 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [985 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [218 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [151 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [13.5 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1050 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [265 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [365 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [26.0 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [881 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [179 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:32 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 c-n-f Metadata [492 B]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [21.5 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [4788 B]
+Get:35 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [592 B]
+Get:37 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7060 B]
+Get:38 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [26.4 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [15.8 kB]
+Get:40 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1304 B]
+Get:41 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:42 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 7594 kB in 2s (3894 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+50 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot
+g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13
+gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+libcrypt-dev libde265-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc
+libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 liblsan0
+libmpc3 libquadmath0 libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev
+lto-disabled-list make manpages-dev rpcsvc-proto
+Suggested packages:
+cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib
+g++-13-multilib gcc-13-doc gcc-multilib autoconf automake libtool flex
+bison gdb gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu glibc-doc bzr
+libgd-tools libheif-plugin-x265 libheif-plugin-ffmpegdec
+libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec
+libheif-plugin-j2kenc libheif-plugin-rav1e libheif-plugin-svtenc
+libstdc++-13-doc make-doc
+The following NEW packages will be installed:
+build-essential cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu
+dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu
+gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0
+libcrypt-dev libde265-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc
+libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 liblsan0
+libmpc3 libquadmath0 libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev
+lto-disabled-list make manpages-dev rpcsvc-proto
+0 upgraded, 52 newly installed, 0 to remove and 50 not upgraded.
+Need to get 1807 kB/71.2 MB of archives.
+After this operation, 242 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-57.59 [1807 kB]
+Fetched 1807 kB in 0s (5823 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package libc-dev-bin.
+(Reading database ... 47670 files and directories currently installed.)
+Preparing to unpack .../00-libc-dev-bin_2.39-0ubuntu8.4_amd64.deb ...
+Unpacking libc-dev-bin (2.39-0ubuntu8.4) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../01-linux-libc-dev_6.8.0-57.59_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.8.0-57.59) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../02-libcrypt-dev_1%3a4.4.36-4build1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.36-4build1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../03-rpcsvc-proto_1.4.2-0ubuntu7_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu7) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../04-libc6-dev_2.39-0ubuntu8.4_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.39-0ubuntu8.4) ...
+Selecting previously unselected package gcc-13-base:amd64.
+Preparing to unpack .../05-gcc-13-base_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../06-libisl23_0.26-3build1.1_amd64.deb ...
+Unpacking libisl23:amd64 (0.26-3build1.1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../07-libmpc3_1.3.1-1build1.1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.3.1-1build1.1) ...
+Selecting previously unselected package cpp-13-x86-64-linux-gnu.
+Preparing to unpack .../08-cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package cpp-13.
+Preparing to unpack .../09-cpp-13_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking cpp-13 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../10-cpp-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../11-cpp_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking cpp (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../12-libcc1-0_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../13-libgomp1_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libgomp1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../14-libitm1_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libitm1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../15-libatomic1_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libatomic1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../16-libasan8_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libasan8:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking liblsan0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../18-libtsan2_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libtsan2:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../19-libubsan1_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libubsan1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../20-libhwasan0_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libhwasan0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../21-libquadmath0_14.2.0-4ubuntu2~24.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Selecting previously unselected package libgcc-13-dev:amd64.
+Preparing to unpack .../22-libgcc-13-dev_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package gcc-13-x86-64-linux-gnu.
+Preparing to unpack .../23-gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package gcc-13.
+Preparing to unpack .../24-gcc-13_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking gcc-13 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../25-gcc-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../26-gcc_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking gcc (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package libstdc++-13-dev:amd64.
+Preparing to unpack .../27-libstdc++-13-dev_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package g++-13-x86-64-linux-gnu.
+Preparing to unpack .../28-g++-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package g++-13.
+Preparing to unpack .../29-g++-13_13.3.0-6ubuntu2~24.04_amd64.deb ...
+Unpacking g++-13 (13.3.0-6ubuntu2~24.04) ...
+Selecting previously unselected package g++-x86-64-linux-gnu.
+Preparing to unpack .../30-g++-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../31-g++_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking g++ (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../32-make_4.3-4.1build2_amd64.deb ...
+Unpacking make (4.3-4.1build2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../33-libdpkg-perl_1.22.6ubuntu6.1_all.deb ...
+Unpacking libdpkg-perl (1.22.6ubuntu6.1) ...
+Selecting previously unselected package lto-disabled-list.
+Preparing to unpack .../34-lto-disabled-list_47_all.deb ...
+Unpacking lto-disabled-list (47) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../35-dpkg-dev_1.22.6ubuntu6.1_all.deb ...
+Unpacking dpkg-dev (1.22.6ubuntu6.1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../36-build-essential_12.10ubuntu1_amd64.deb ...
+Unpacking build-essential (12.10ubuntu1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../37-libfakeroot_1.33-1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.33-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../38-fakeroot_1.33-1_amd64.deb ...
+Unpacking fakeroot (1.33-1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../39-libalgorithm-diff-perl_1.201-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.201-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl:amd64.
+Preparing to unpack .../40-libalgorithm-diff-xs-perl_0.04-8build3_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl:amd64 (0.04-8build3) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../41-libalgorithm-merge-perl_0.08-5_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-5) ...
+Selecting previously unselected package libaom3:amd64.
+Preparing to unpack .../42-libaom3_3.8.2-2ubuntu0.1_amd64.deb ...
+Unpacking libaom3:amd64 (3.8.2-2ubuntu0.1) ...
+Selecting previously unselected package libheif-plugin-aomdec:amd64.
+Preparing to unpack .../43-libheif-plugin-aomdec_1.17.6-1ubuntu4.1_amd64.deb ...
+Unpacking libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.1) ...
+Selecting previously unselected package libde265-0:amd64.
+Preparing to unpack .../44-libde265-0_1.0.15-1build3_amd64.deb ...
+Unpacking libde265-0:amd64 (1.0.15-1build3) ...
+Selecting previously unselected package libheif-plugin-libde265:amd64.
+Preparing to unpack .../45-libheif-plugin-libde265_1.17.6-1ubuntu4.1_amd64.deb ...
+Unpacking libheif-plugin-libde265:amd64 (1.17.6-1ubuntu4.1) ...
+Selecting previously unselected package libheif1:amd64.
+Preparing to unpack .../46-libheif1_1.17.6-1ubuntu4.1_amd64.deb ...
+Unpacking libheif1:amd64 (1.17.6-1ubuntu4.1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../47-libgd3_2.3.3-9ubuntu5_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.3-9ubuntu5) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../48-libc-devtools_2.39-0ubuntu8.4_amd64.deb ...
+Unpacking libc-devtools (2.39-0ubuntu8.4) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../49-libfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-4ubuntu5) ...
+Selecting previously unselected package libheif-plugin-aomenc:amd64.
+Preparing to unpack .../50-libheif-plugin-aomenc_1.17.6-1ubuntu4.1_amd64.deb ...
+Unpacking libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../51-manpages-dev_6.7-2_all.deb ...
+Unpacking manpages-dev (6.7-2) ...
+Setting up libaom3:amd64 (3.8.2-2ubuntu0.1) ...
+Setting up manpages-dev (6.7-2) ...
+Setting up lto-disabled-list (47) ...
+Setting up libfile-fcntllock-perl (0.22-4ubuntu5) ...
+Setting up libalgorithm-diff-perl (1.201-1) ...
+Setting up linux-libc-dev:amd64 (6.8.0-57.59) ...
+Setting up libgomp1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libfakeroot:amd64 (1.33-1) ...
+Setting up fakeroot (1.33-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up rpcsvc-proto (1.4.2-0ubuntu7) ...
+Setting up gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04) ...
+Setting up make (4.3-4.1build2) ...
+Setting up libquadmath0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libmpc3:amd64 (1.3.1-1build1.1) ...
+Setting up libatomic1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libdpkg-perl (1.22.6ubuntu6.1) ...
+Setting up libubsan1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libhwasan0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libcrypt-dev:amd64 (1:4.4.36-4build1) ...
+Setting up libasan8:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libtsan2:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libisl23:amd64 (0.26-3build1.1) ...
+Setting up libde265-0:amd64 (1.0.15-1build3) ...
+Setting up libc-dev-bin (2.39-0ubuntu8.4) ...
+Setting up libalgorithm-diff-xs-perl:amd64 (0.04-8build3) ...
+Setting up libcc1-0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up liblsan0:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libitm1:amd64 (14.2.0-4ubuntu2~24.04) ...
+Setting up libalgorithm-merge-perl (0.08-5) ...
+Setting up cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Setting up dpkg-dev (1.22.6ubuntu6.1) ...
+Setting up libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04) ...
+Setting up libc6-dev:amd64 (2.39-0ubuntu8.4) ...
+Setting up libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04) ...
+Setting up cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Setting up cpp-13 (13.3.0-6ubuntu2~24.04) ...
+Setting up gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Setting up gcc-13 (13.3.0-6ubuntu2~24.04) ...
+Setting up cpp (4:13.2.0-7ubuntu1) ...
+Setting up g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04) ...
+Setting up gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Setting up gcc (4:13.2.0-7ubuntu1) ...
+Setting up g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Setting up g++-13 (13.3.0-6ubuntu2~24.04) ...
+Setting up g++ (4:13.2.0-7ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.10ubuntu1) ...
+Setting up libheif1:amd64 (1.17.6-1ubuntu4.1) ...
+Setting up libgd3:amd64 (2.3.3-9ubuntu5) ...
+Setting up libc-devtools (2.39-0ubuntu8.4) ...
+Setting up libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.1) ...
+Setting up libheif-plugin-libde265:amd64 (1.17.6-1ubuntu4.1) ...
+Setting up libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ brew reinstall -s mrbayes
+Warning: building from source is not supported!
+You're on your own. Failures are expected so don't create any issues, please!
+==> Fetching dependencies for mrbayes: beagle, gmp, isl, mpfr, libmpc, lz4, xz, zlib, zstd, binutils, gcc, icu4c@77, ncurses, readline, libxml2, hwloc, ca-certificates, openssl@3, libevent, pmix, open-mpi and pkgconf
+==> Fetching beagle
+==> Downloading https://ghcr.io/v2/homebrew/core/beagle/manifests/4.0.1-1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/beagle/blobs/sha256:fc0660f8
+###################################################################### 100.0%
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:3dca3544fac
+###################################################################### 100.0%
+==> Fetching isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/blobs/sha256:25c8bf618d4
+###################################################################### 100.0%
+==> Fetching mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.2
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/blobs/sha256:91dfeb407d
+###################################################################### 100.0%
+==> Fetching libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/blobs/sha256:f6542ae5
+###################################################################### 100.0%
+==> Fetching lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:a8082c2e40d
+###################################################################### 100.0%
+==> Fetching xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.0
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:10b677c3398e
+###################################################################### 100.0%
+==> Fetching zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/blobs/sha256:38f2469db2
+###################################################################### 100.0%
+==> Fetching zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:4748929efb
+###################################################################### 100.0%
+==> Fetching binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.44
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:0ea2ef
+###################################################################### 100.0%
+==> Fetching gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:0902085b218
+###################################################################### 100.0%
+==> Fetching icu4c@77
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/manifests/77.1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/blobs/sha256:f82d4c
+###################################################################### 100.0%
+==> Fetching ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:7c49662
+###################################################################### 100.0%
+==> Fetching readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.13
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:099378
+###################################################################### 100.0%
+==> Fetching libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.13.7
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:7382946
+###################################################################### 100.0%
+==> Fetching hwloc
+==> Downloading https://ghcr.io/v2/homebrew/core/hwloc/manifests/2.12.0
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/hwloc/blobs/sha256:f8fe14dfb
+###################################################################### 100.0%
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/20
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256
+###################################################################### 100.0%
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:20b12
+###################################################################### 100.0%
+==> Fetching libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12_1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:83ef4c
+###################################################################### 100.0%
+==> Fetching pmix
+==> Downloading https://ghcr.io/v2/homebrew/core/pmix/manifests/5.0.7
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pmix/blobs/sha256:758f1be12c
+###################################################################### 100.0%
+==> Fetching open-mpi
+==> Downloading https://ghcr.io/v2/homebrew/core/open-mpi/manifests/5.0.7
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/open-mpi/blobs/sha256:35c717
+###################################################################### 100.0%
+==> Fetching pkgconf
+==> Downloading https://ghcr.io/v2/homebrew/core/pkgconf/manifests/2.4.3-1
+###################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pkgconf/blobs/sha256:9177b7f
+###################################################################### 100.0%
+==> Fetching mrbayes
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/cacb
+###################################################################### 100.0%
+==> Downloading https://github.com/NBISweden/MrBayes/archive/refs/tags/v3.2.7
+==> Downloading from https://codeload.github.com/NBISweden/MrBayes/tar.gz/ref
+
+# #-=#=-
+
+==> Reinstalling mrbayes
+==> Installing dependencies for mrbayes: pkgconf, beagle, gmp, isl, mpfr, libmpc, lz4, xz, zlib, zstd, binutils, gcc, icu4c@77, ncurses, readline, libxml2, hwloc, ca-certificates, openssl@3, libevent, pmix and open-mpi
+==> Installing mrbayes dependency: pkgconf
+==> Downloading https://ghcr.io/v2/homebrew/core/pkgconf/manifests/2.4.3-1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/f938254e85413ef0d18283c9c932823434b88c0c790e04e7534e2a3e923d0588--pkgconf-2.4.3-1.bottle_manifest.json
+==> Pouring pkgconf--2.4.3.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pkgconf/2.4.3: 28 files, 516KB
+==> Installing mrbayes dependency: beagle
+==> Downloading https://ghcr.io/v2/homebrew/core/beagle/manifests/4.0.1-1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/aefd2a5c2817c12d740c27743ce6b539ba91d260a6a8bcdcfc7513461277866d--beagle-4.0.1-1.bottle_manifest.json
+==> Pouring beagle--4.0.1.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/beagle/4.0.1: 20 files, 1.3MB
+==> Installing mrbayes dependency: gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+Already downloaded: /home/suki/.cache/Homebrew/downloads/70a72a71216843d66a953c06ff6337445ce9bc94fae9f0e301e2f59005274a8e--gmp-6.3.0.bottle_manifest.json
+==> Pouring gmp--6.3.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gmp/6.3.0: 24 files, 3.9MB
+==> Installing mrbayes dependency: isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+Already downloaded: /home/suki/.cache/Homebrew/downloads/40b1c5526f95db33208143fa79887179e758121659d8877597f553e6e6188879--isl-0.27.bottle_manifest.json
+==> Pouring isl--0.27.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/isl/0.27: 75 files, 9.9MB
+==> Installing mrbayes dependency: mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.2
+Already downloaded: /home/suki/.cache/Homebrew/downloads/991b389ea6f1daa5dc48fd5250bcc5b85e827eb18b8ad4acd89419f2ace47d88--mpfr-4.2.2.bottle_manifest.json
+==> Pouring mpfr--4.2.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpfr/4.2.2: 32 files, 4.0MB
+==> Installing mrbayes dependency: libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/fdfa98e0f8bb3ce075cb32776ac2345aa2f89252706c162aecfc841085fa76be--libmpc-1.3.1.bottle_manifest.json
+==> Pouring libmpc--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libmpc/1.3.1: 14 files, 643.0KB
+==> Installing mrbayes dependency: lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/8e11e90eb21a06e0f199af9d80e011e3693c77dd353b2477579d95c8471a5802--lz4-1.10.0-1.bottle_manifest.json
+==> Pouring lz4--1.10.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/lz4/1.10.0: 24 files, 798.7KB
+==> Installing mrbayes dependency: xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.0
+Already downloaded: /home/suki/.cache/Homebrew/downloads/a50144423da26f3eb1964f609d011f391d059b385515c276fd637b1ec032419f--xz-5.8.0.bottle_manifest.json
+==> Pouring xz--5.8.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/xz/5.8.0: 97 files, 2.6MB
+==> Installing mrbayes dependency: zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/f68d0caf232d52f2aa586abefbbfd7e958e384d84f3967008fa83de94b5f10ae--zlib-1.3.1.bottle_manifest.json
+==> Pouring zlib--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zlib/1.3.1: 14 files, 476.0KB
+==> Installing mrbayes dependency: zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+Already downloaded: /home/suki/.cache/Homebrew/downloads/596a67b1677f62a8e24e6fdfa7c879891221cb8261242f4355fb4deff1a2ec39--zstd-1.5.7.bottle_manifest.json
+==> Pouring zstd--1.5.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zstd/1.5.7: 32 files, 2.9MB
+==> Installing mrbayes dependency: binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.44
+Already downloaded: /home/suki/.cache/Homebrew/downloads/8dec3c476e7ac40bbb8a32ba3c2bc58546b09de0fb300ffe32425e1100f62285--binutils-2.44.bottle_manifest.json
+==> Pouring binutils--2.44.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/binutils/2.44: 6,462 files, 392.8MB
+==> Installing mrbayes dependency: gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/cece94dbe926093c968a24f66b9a0172afe5cc2ef22253029bc591147237045b--gcc-14.2.0_1.bottle_manifest.json
+==> Pouring gcc--14.2.0_1.x86_64_linux.bottle.tar.gz
+==> Creating the GCC specs file: /home/linuxbrew/.linuxbrew/Cellar/gcc/14.2.0
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gcc/14.2.0_1: 2,105 files, 550.9MB
+==> Installing mrbayes dependency: icu4c@77
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/manifests/77.1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/35ec2c3adb94255ba47424a4334da9616d97e1ec6d59ed907b368535018bed0a--icu4c@77-77.1.bottle_manifest.json
+==> Pouring icu4c@77--77.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/icu4c@77/77.1: 277 files, 89.0MB
+==> Installing mrbayes dependency: ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+Already downloaded: /home/suki/.cache/Homebrew/downloads/b2f8ce4e08b15832435170efd265346225ee388d5baab3d5c50e3a77c5673b5a--ncurses-6.5.bottle_manifest.json
+==> Pouring ncurses--6.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.5: 4,037 files, 10.9MB
+==> Installing mrbayes dependency: readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.13
+Already downloaded: /home/suki/.cache/Homebrew/downloads/aa1afa38997a2866d91c81fdda8b36d436cd4ea7a82aed07d13c83c56eb3460e--readline-8.2.13.bottle_manifest.json
+==> Pouring readline--8.2.13.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/readline/8.2.13: 51 files, 2MB
+==> Installing mrbayes dependency: libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.13.7
+Already downloaded: /home/suki/.cache/Homebrew/downloads/be9f4502af1c7d9846e8cf5774eec1302d0daa7c4a3f97d9c26c10548497b5ce--libxml2-2.13.7.bottle_manifest.json
+==> Pouring libxml2--2.13.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxml2/2.13.7: 136 files, 7MB
+==> Installing mrbayes dependency: hwloc
+==> Downloading https://ghcr.io/v2/homebrew/core/hwloc/manifests/2.12.0
+Already downloaded: /home/suki/.cache/Homebrew/downloads/ea118ff8fbe40cd1dc03feaa0fce7c2e7fc28f751c3ea46bfc3099eee0a6d05e--hwloc-2.12.0.bottle_manifest.json
+==> Pouring hwloc--2.12.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/hwloc/2.12.0: 987 files, 11.2MB
+==> Installing mrbayes dependency: ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/20
+Already downloaded: /home/suki/.cache/Homebrew/downloads/6c1debb525d4dc6007afae4cd2b772105111632b22fc28506550f6dfe27c6d52--ca-certificates-2025-02-25.bottle_manifest.json
+==> Pouring ca-certificates--2025-02-25.all.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ca-certificates/2025-02-25: 4 files, 251.4KB
+==> Installing mrbayes dependency: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/a2bb8b71ebddb1fe8553581fcbc1ffc4ab36795c68b3cd47977cf83f1673a5b1--openssl@3-3.4.1.bottle_manifest.json
+==> Pouring openssl@3--3.4.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openssl@3/3.4.1: 7,246 files, 40MB
+==> Installing mrbayes dependency: libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12_1
+Already downloaded: /home/suki/.cache/Homebrew/downloads/68b113f9ab63db45f4e1860de522ce2ca4fa081eb3c0d5c7d6005a35c3cf8d06--libevent-2.1.12_1.bottle_manifest.json
+==> Pouring libevent--2.1.12_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libevent/2.1.12_1: 63 files, 2.6MB
+==> Installing mrbayes dependency: pmix
+==> Downloading https://ghcr.io/v2/homebrew/core/pmix/manifests/5.0.7
+Already downloaded: /home/suki/.cache/Homebrew/downloads/df4a7bf3e46015b0eff41d50681af64af82df9a3833941ad972780d7436daad1--pmix-5.0.7.bottle_manifest.json
+==> Pouring pmix--5.0.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pmix/5.0.7: 364 files, 9.5MB
+==> Installing mrbayes dependency: open-mpi
+==> Downloading https://ghcr.io/v2/homebrew/core/open-mpi/manifests/5.0.7
+Already downloaded: /home/suki/.cache/Homebrew/downloads/802e2b50aaf9e60ee1804426a8c1cd7e65a16dc4aa998765b181d8c52a849987--open-mpi-5.0.7.bottle_manifest.json
+==> Pouring open-mpi--5.0.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/open-mpi/5.0.7: 2,625 files, 76.7MB
+==> Installing mrbayes
+==> ./configure --with-mpi=yes --disable-avx ax_cv_have_sse41_cpu_ext=no ax_c
+==> make install
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mrbayes/3.2.7_3: 22 files, 7.2MB, built in 1 minute 40 seconds
+==> Running `brew cleanup mrbayes`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /home/suki/.cache/Homebrew/mrbayes--3.2.7.tar.gz... (9.4MB)
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$ mb
+
+```
+                        MrBayes 3.2.7a x86_64
+
+                  (Bayesian Analysis of Phylogeny)
+
+                         (Parallel version)
+                     (1 processors available)
+
+          Distributed under the GNU General Public License
+
+           Type "help" or "help <command>" for information
+                 on the commands that are available.
+
+               Type "about" for authorship and general
+                   information about the program.
+
+```
+
+MrBayes > execute /mnt/c/Users/欧阳葭/Desktop/algaemb.nex
+
+Unknown character in command string
+
+MrBayes > execute /mnt/c/Users/欧阳葭/Desktop/mbblock.txt
+
+Unknown character in command string
+
+MrBayes > cd ~/phylo-class/Bayesian-exercise
+
+Could not find command "cd"
+
+MrBayes > quit
+
+Quitting program
+
+(mrbayes-env) suki@LAPTOP-5PMP3V9O:/mnt/c/Users/欧阳葭$

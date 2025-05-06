@@ -1,0 +1,14 @@
+begin mrbayes;
+    set autoclose=yes nowarn=yes;
+
+    lset nst=6 rates=gamma;
+    prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+    prset ratepr=variable;
+    prset brlenspr=unconstrained:exp(10.0);
+
+    mcmcp ngen=200000 samplefreq=200 printfreq=200 diagnfreq=1000 burninfrac=0.25;
+    mcmcp nchains=4 nruns=2 temp=0.2 savebrlens=yes;
+
+    mcmc;
+    sumt burnin=500;
+end;
